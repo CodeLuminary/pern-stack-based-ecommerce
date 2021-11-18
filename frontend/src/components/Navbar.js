@@ -1,6 +1,9 @@
 import "../css/navbar.css";
 import {Link} from "react-router-dom";
+import {useSelector} from 'react-redux'
+
 const Navbar = ({click}) =>{
+    const cart = useSelector((state)=> state.cart)
 
     return (
         <nav className="navbar">
@@ -17,8 +20,7 @@ const Navbar = ({click}) =>{
         <li>
           <Link to="/cart" className="cart__link">
             <i className="fas fa-shopping-cart"></i>
-            <span>
-              Cart <span className="cartlogo__badge"></span>
+            <span>Cart <span className="cartlogo__badge">{cart.total}</span>
             </span>
           </Link>
         </li>

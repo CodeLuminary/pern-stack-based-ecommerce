@@ -4,10 +4,10 @@ let lastId = 0;
 
 export const cartSlice = createSlice({
     name: "cart",
-    initialState:{ value: [],total = 0},
+    initialState:{ value: [],total: 0},
     reducers:{
         addItem: (state, action)=>{
-            state.value = [
+            state.value= [
                 ...state.value,
                 {
                     id: ++lastId,
@@ -25,15 +25,19 @@ export const cartSlice = createSlice({
         },
         decrementItemQuantity: (state, action)=>{
             state.value = state.value.map(item => item.id === action.payload.id ? {
-                ...item, quantity: --quantity
+                ...item, quantity: --item.quantity
             } : item );
             state.total -= 1;
         },
         incrementItemQuantity: (state, action)=>{
             state.value = state.value.map(item => item===action.payload.id ? {
-                ...item, quantity: ++quantity
+                ...item, quantity: ++item.quantity
             } : item);
             state.total += 1;
         }
     }
 })
+
+export const {addItem, removeItem, decrementItemQuantity, incrementItemQuantity} = cartSlice.actions;
+
+export default cartSlice.reducer;
