@@ -20,7 +20,7 @@ const Navbar = ({click}) =>{
         <li>
           <Link to="/cart" className="cart__link">
             <i className="fas fa-shopping-cart"></i>
-            <span>Cart <span className="cartlogo__badge">{cart.total}</span>
+            <span>Cart <span className="cartlogo__badge">{cart.tota}</span>
             </span>
           </Link>
         </li>
