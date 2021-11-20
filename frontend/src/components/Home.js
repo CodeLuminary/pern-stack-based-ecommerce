@@ -1,17 +1,30 @@
 import "../css/home.css";
-import { useDispatch,useSelector } from "react-redux";
+//import { useDispatch,useSelector } from "react-redux";
+import { useEffect } from "react";
+import api from '../Api'
 
 const Home = () =>{
-    const products = useSelector((state)=>state.products);
-    const dispatch = useDispatch();
+    //const products = useSelector((state)=>state.products);
+    //const dispatch = useDispatch();
     
-    const fetchProduct = async () =>{
-        
+    const fetchProducts = async () =>{
+        api.fetchApi('https://fakestoreapi.com/products','GET')
+        .then(response=>response.json())
+        .then(result=>{
+            alert(result)
+        })
     }
+
+    useEffect(()=>{
+        console.log("Entered")
+        fetchProducts();
+    },[]);
+
+    console.log("good")
 
     return(
         <div className="product-div">
-            
+            <h1>Good</h1>
         </div>
     )
 }
