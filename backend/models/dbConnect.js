@@ -50,10 +50,10 @@ class dbConnect{
         let sql = "INSERT INTO " + table + " (";
         let sqlvalues = "";
         for(tableColumn in data){
-            sql += tableColumn + ", ";
-            sqlvalues += data[tableColumn] + ", "
+            sql += tableColumn + ", ";           
+            sqlvalues += typeof data[tableColumn] === 'string' ? "'" + data[tableColumn] + "', " : data[tableColumn];
         }
-        
+
         sql = sql.slice(0, -2) + ") VALUES (" + sqlvalues.slice(0,-2) + ");";
         return this.queryDb(sql);
     }
