@@ -5,7 +5,7 @@ const filename = 'dbConnect.js'
 
 class dbConnect{
     constructor(dbConnectionObject){
-        this.client = new Client({
+        this.db = new Client({
             host: dbConnectionObject.host,
             user: dbConnectionObject.user,
             port: dbConnectionObject.port,
@@ -16,7 +16,7 @@ class dbConnect{
 
     connectToDb = ()=>{
         try{
-            this.client.connect();
+            this.db.connect();
 
             return "Database connection successfully";
         }
@@ -31,7 +31,7 @@ class dbConnect{
 
     queryDb = async (sql)=>{
         return new Promise((resolve, reject)=>{
-            this.client.query(sql,(err,res)=>{
+            this.db.query(sql,(err,res)=>{
                 if(err){
                     reject(err);
                 }
@@ -43,11 +43,23 @@ class dbConnect{
     }
 
     getAllData = async (table)=>{
-        return await this.client.query(`SELECT * FROM ${table}`);
+        return await this.queryDb(`SELECT * FROM ${table}`);
+    }
+
+    insertData = async (table, data)=>{
+        let sql = "INSERT INTO " + table + " (";
+        let sqlvalues = "";
+        for(tableColumn in data){
+            sql += tableColumn + ", ";
+            sqlvalues += data[tableColumn] + ", "
+        }
+        sql = sql.slice(0, -2);
+        sql += ") VALUES (" + sqlvalues.slice(0,-2) + ");";
+        return this.queryDb(sql);
     }
 
     closeConnection = async ()=>{
-        this.client.end;
+        this.db.end;
     }
 }
 
