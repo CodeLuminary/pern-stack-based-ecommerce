@@ -2,7 +2,7 @@ const {Client} = require('pg');
 
 class dbConnect{
     constructor(dbConnectionObject){
-        this.client = Client = new Client({
+        this.client = new Client({
             host: dbConnectionObject.host,
             user: dbConnectionObject.user,
             port: dbConnectionObject.port,
@@ -15,7 +15,7 @@ class dbConnect{
         try{
             this.client.connect();
 
-            return "Database created successfully";
+            return "Database connection successfully";
         }
         catch(e){
             return {
@@ -38,7 +38,7 @@ class dbConnect{
         })
     }
 
-    getAllData = (table)=>{
+    getAllData = async (table)=>{
         return await this.client.query(`SELECT * FROM ${table}`);
     }
 
