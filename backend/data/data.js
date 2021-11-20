@@ -22,6 +22,13 @@ class data{
             //Return email data here
         }
     }
+
+    //timezone should be in this format 1, -2
+    static getCurrentDate = (timezone) =>{
+        const date = new Date();
+        var newDate = new Date(timezone*60 * 60000 + date.valueOf())
+        return newDate;
+    }
 }
 
 module.exports = data;

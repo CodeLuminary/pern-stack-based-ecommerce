@@ -1,9 +1,5 @@
 const express = require('express');
 const cors = require('cors')
-const bodyParser = require('body-parser');
-
-const errorLogger = require('./data/errorLogger')
-errorLogger("Just testing again")
 
 const app = express();
 
@@ -11,8 +7,8 @@ app.use(express.json());
 app.use(express.static(__dirname));
 app.use(cors());
 
-
-
+const data = require('./data/data')
+console.log(data.getCurrentDate(1))
 
 if(process.env.NODE_ENV === 'production'){
     app.listen();
