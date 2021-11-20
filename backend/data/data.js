@@ -30,7 +30,7 @@ class data{
     //timezone should be in this format 1, -2
     static getCurrentDateTime = (timezone) =>{
         const date = new Date();
-        var newDate = new Date(timezone*60 * 60000 + date.valueOf())
+        var newDate = new Date(timezone*60 * 60000 + date.valueOf() + (date.getTimezoneOffset()*60000))
         return newDate;
     }
 }
