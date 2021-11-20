@@ -6,9 +6,8 @@ const app = express();
 app.use(express.json());
 app.use(express.static(__dirname));
 app.use(cors());
-
-const data = require('./data/data')
-console.log(data.getCurrentDate(1))
+const errorLogger = require('./data/errorLogger')
+errorLogger.constructDetailedError('errLogger.test.js','test','Testing error logging\nVery Good');
 
 if(process.env.NODE_ENV === 'production'){
     app.listen();

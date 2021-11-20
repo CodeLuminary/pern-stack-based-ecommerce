@@ -23,8 +23,12 @@ class data{
         }
     }
 
+    static getTimeZone = () =>{
+        return process.env.TIME_ZONE;
+    }
+
     //timezone should be in this format 1, -2
-    static getCurrentDate = (timezone) =>{
+    static getCurrentDateTime = (timezone) =>{
         const date = new Date();
         var newDate = new Date(timezone*60 * 60000 + date.valueOf())
         return newDate;

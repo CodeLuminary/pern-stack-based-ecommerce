@@ -1,4 +1,9 @@
-Testing error logging
-Very GoodTesting error logging
-Very GoodTesting error logging
+
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 11:53:26 GMT+0100 (West Africa Standard Time); -60
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR: Testing error logging
 Very Good
+*********************************************************************************************
+        
