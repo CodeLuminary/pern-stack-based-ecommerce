@@ -10,6 +10,8 @@ app.use(express.static(__dirname));
 app.use(cors());
 
 
+
+
 if(process.env.NODE_ENV === 'production'){
     app.listen();
 }
