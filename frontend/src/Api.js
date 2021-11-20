@@ -1,13 +1,13 @@
  class restApi{
     //Set domain name here
     static domain = "";
-    static fetchApi(url, methodType, requestObject=null, isDomainUsed=true,authorizationString=null){   
+    static PostApi(url, requestObject, isDomainUsed=true,authorizationString=null){   
         if(!isDomainUsed){
             url = restApi.domain + url;
         }
         console.log("gogle")
         return fetch(url, {
-            method: methodType,
+            method: 'POST',
             mode: 'cors',
             cache: 'no-cache',
             headers: authorizationString !== null ? {
@@ -16,8 +16,24 @@
             } : {
                 'Content-Type': 'application/json'
             },
-            body: requestObject===null ? "" : JSON.stringify(requestObject)
+            body: JSON.stringify(requestObject)
         });
+    }
+    static getApi(url,isDomainUsed = true,authorizationString=null){
+        if(!isDomainUsed){
+            url = restApi.domain + url;
+        }
+
+        return fetch(url,{
+            method: 'GET',
+            mode: 'cors',
+            cache: 'no-cache',
+            headers: authorizationString !== null ? {
+                'Authorization': authorizationString,
+            } : {
+                'Content-Type': 'application/json'
+            }
+        })
     }
 }
 export default restApi;

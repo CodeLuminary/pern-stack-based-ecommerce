@@ -8,7 +8,7 @@ const Home = () =>{
     //const dispatch = useDispatch();
     
     const fetchProducts = async () =>{
-        api.fetchApi('https://fakestoreapi.com/products','GET')
+        api.getApi('https://fakestoreapi.com/products')
         .then(response=>response.json())
         .then(result=>{
             alert(result)
