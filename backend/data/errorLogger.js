@@ -14,10 +14,11 @@ class errorLogger{
     } 
     
     static constructDetailedError = async (filename, method, errorObject) =>{
+        const timeZoneOffset = ((new Date().getTimezoneOffset()*-1))/60 
         const txt = `
 *********************************************************************************************
 ERROR DATE/TIME: ${data.getCurrentDateTime(data.getTimeZone())}; 
-TIME OFFSET: GMT ${(new Date().getTimezoneOffset())/60}
+TIME OFFSET: GMT ${timeZoneOffset > 0 ? '+' + timeZoneOffset : timeZoneOffset}
 FILE NAME: ${filename};
 METHOD: ${method};
 ERROR MESSAGE: ${errorObject.message}
