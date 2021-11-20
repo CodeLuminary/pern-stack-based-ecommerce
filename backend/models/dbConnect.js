@@ -53,8 +53,8 @@ class dbConnect{
             sql += tableColumn + ", ";
             sqlvalues += data[tableColumn] + ", "
         }
-        sql = sql.slice(0, -2);
-        sql += ") VALUES (" + sqlvalues.slice(0,-2) + ");";
+        
+        sql = sql.slice(0, -2) + ") VALUES (" + sqlvalues.slice(0,-2) + ");";
         return this.queryDb(sql);
     }
 
