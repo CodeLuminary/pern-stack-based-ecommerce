@@ -1,4 +1,7 @@
 const {Client} = require('pg');
+const errorLogger = require('../data/errorLogger');
+
+const filename = 'dbConnect.js'
 
 class dbConnect{
     constructor(dbConnectionObject){
@@ -18,6 +21,7 @@ class dbConnect{
             return "Database connection successfully";
         }
         catch(e){
+            errorLogger.constructDetailedError(filename, 'connectToDb', e);
             return {
                 message: 'Error connecting to database',
                 data: e.message

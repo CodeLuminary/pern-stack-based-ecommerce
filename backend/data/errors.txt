@@ -7,3 +7,146 @@ ERROR: Testing error logging
 Very Good
 *********************************************************************************************
         
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 10:59:23 GMT+0100 (West Africa Standard Time); 
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR: Testing error logging
+Very Good
+*********************************************************************************************
+        
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 10:59:31 GMT+0100 (West Africa Standard Time); 
+
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR: Testing error logging
+Very Good
+*********************************************************************************************
+        
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 10:59:37 GMT+0100 (West Africa Standard Time); 
+TIME OFF
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR: Testing error logging
+Very Good
+*********************************************************************************************
+        
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 10:59:40 GMT+0100 (West Africa Standard Time); 
+TIME OFFSET: 
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR: Testing error logging
+Very Good
+*********************************************************************************************
+        
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 10:59:53 GMT+0100 (West Africa Standard Time); 
+TIME OFFSET: class data {
+  static getDbData = () => {
+    return {
+      host: process.env.DB_HOST,
+      user: process.env.DB_USER,
+      port: process.env.DB_PORT,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_PASSWORD
+    };
+  };
+  static getSecretKey = () => {
+    return process.env.SECRET_KEY;
+  };
+  static getEmailData = () => {
+    return {//Return email data here
+    };
+  };
+  static getTimeZone = () => {
+    return process.env.TIME_ZONE;
+  }; //timezone should be in this format 1, -2
+
+  static getCurrentDateTime = timezone => {
+    const date = new Date();
+    var newDate = new Date(timezone * 60 * 60000 + date.valueOf() + date.getTimezoneOffset() * 60000);
+    return newDate;
+  };
+}
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR: Testing error logging
+Very Good
+*********************************************************************************************
+        
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 10:59:55 GMT+0100 (West Africa Standard Time); 
+TIME OFFSET: undefined
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR: Testing error logging
+Very Good
+*********************************************************************************************
+        
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 11:00:10 GMT+0100 (West Africa Standard Time); 
+TIME OFFSET: function getTimezoneOffset() { [native code] }
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR: Testing error logging
+Very Good
+*********************************************************************************************
+        
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 11:00:11 GMT+0100 (West Africa Standard Time); 
+TIME OFFSET: -60
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR: Testing error logging
+Very Good
+*********************************************************************************************
+        
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 11:00:17 GMT+0100 (West Africa Standard Time); 
+TIME OFFSET: -1
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR: Testing error logging
+Very Good
+*********************************************************************************************
+        
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 11:00:24 GMT+0100 (West Africa Standard Time); 
+TIME OFFSET: -1
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR: Testing error logging
+Very Good
+*********************************************************************************************
+        
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 11:00:52 GMT+0100 (West Africa Standard Time); 
+TIME OFFSET: GMT -1
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR: Testing error logging
+Very Good
+*********************************************************************************************
+        
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 16:08:23 GMT+0100 (West Africa Standard Time); 
+TIME OFFSET: GMT -1
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR: Testing error logging
+Very Good
+*********************************************************************************************
+        
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 16:13:57 GMT+0100 (West Africa Standard Time); 
+TIME OFFSET: GMT -1
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR MESSAGE: Testing error logging
+Very Good
+ERROR TARGET: Line 100
+*********************************************************************************************
+        

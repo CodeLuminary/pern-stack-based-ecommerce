@@ -6,7 +6,10 @@ test('Test error logging to file.', async () => {
 });*/
 
 test('Test detailed error logging to file.', async () => {
-    const data = await errorLogger.constructDetailedError('errLogger.test.js','test','Testing error logging\nVery Good');
+    const data = await errorLogger.constructDetailedError('errLogger.test.js','test',{
+        message:'Testing error logging\nVery Good',
+        target: 'Line 100'
+    });
     expect(data).toBe('Write successful');
 });
 

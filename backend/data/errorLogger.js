@@ -13,13 +13,15 @@ class errorLogger{
         })
     } 
     
-    static constructDetailedError = async (filename, method, errorText) =>{
+    static constructDetailedError = async (filename, method, errorObject) =>{
         const txt = `
 *********************************************************************************************
-ERROR DATE/TIME: ${data.getCurrentDateTime(data.getTimeZone())}; ${new Date().getTimezoneOffset()   }
+ERROR DATE/TIME: ${data.getCurrentDateTime(data.getTimeZone())}; 
+TIME OFFSET: GMT ${(new Date().getTimezoneOffset())/60}
 FILE NAME: ${filename};
 METHOD: ${method};
-ERROR: ${errorText}
+ERROR MESSAGE: ${errorObject.message}
+ERROR TARGET: ${errorObject.target}
 *********************************************************************************************
         `;
         return errorLogger.writeError(txt);
