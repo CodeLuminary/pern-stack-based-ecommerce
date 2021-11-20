@@ -9,8 +9,20 @@ class dbConnect{
             password: dbConnectionObject.password,
             database: dbConnectionObject.database
         });
+    }
 
-        this.client.connect();
+    connectToDb = ()=>{
+        try{
+            this.client.connect();
+
+            return "Database created successfully";
+        }
+        catch(e){
+            return {
+                message: 'Error connecting to database',
+                data: e.message
+            }
+        }
     }
 
     queryDb = async (sql)=>{
@@ -24,6 +36,10 @@ class dbConnect{
                 }
             })
         })
+    }
+
+    getAllData = (table)=>{
+        return await this.client.query(`SELECT * FROM ${table}`);
     }
 
     closeConnection = async ()=>{
