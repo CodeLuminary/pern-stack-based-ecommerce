@@ -4,7 +4,7 @@ const data = require('./data')
 class errorLogger{
     static writeError = async (errorText) =>{
         return new Promise((resolve,reject)=>{
-            fs.appendFile('./backend/data/errors.txt', errorText,(err)=>{
+            fs.appendFile('./data/errors.txt', errorText,(err)=>{
                 if(err){
                     reject(err)
                 }

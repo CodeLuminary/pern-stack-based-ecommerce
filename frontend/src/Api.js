@@ -1,9 +1,9 @@
-export default class restApi{
+ class restApi{
     //Set domain name here
     static domain = "";
-    static fetchApi(url, methodType, requestObject, isDomainUsed=true,authorizationString=null){   
+    static fetchApi(url, methodType, requestObject=null, isDomainUsed=true,authorizationString=null){   
         if(!isDomainUsed){
-            url = this.domain + url;
+            url = restApi.domain + url;
         }
 
         return fetch(url, {
@@ -16,7 +16,8 @@ export default class restApi{
             } : {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(requestObject)
+            body: requestObject===null ? "" : JSON.stringify(requestObject)
         });
     }
 }
+export default restApi;

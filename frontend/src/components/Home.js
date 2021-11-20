@@ -5,7 +5,15 @@ const Home = () =>{
     const products = useSelector((state)=>state.products);
     const dispatch = useDispatch();
     
-    
+    const fetchProduct = async () =>{
+        
+    }
+
+    return(
+        <div className="product-div">
+            
+        </div>
+    )
 }
 
 export default Home;
