@@ -8,3 +8,183 @@ ERROR MESSAGE: undefined
 ERROR TARGET: undefined
 *********************************************************************************************
         
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 20:06:20 GMT+0100 (West Africa Standard Time); 
+TIME OFFSET: GMT +1
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR MESSAGE: Testing error logging
+Very Good
+ERROR TARGET: Line 100
+*********************************************************************************************
+        
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 20:07:06 GMT+0100 (West Africa Standard Time); 
+TIME OFFSET: GMT +1
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR MESSAGE: Testing error logging
+Very Good
+ERROR TARGET: Line 100
+*********************************************************************************************
+        
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 20:11:33 GMT+0100 (West Africa Standard Time); 
+TIME OFFSET: GMT +1
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR MESSAGE: Testing error logging
+Very Good
+ERROR TARGET: Line 100
+*********************************************************************************************
+        
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 20:11:54 GMT+0100 (West Africa Standard Time); 
+TIME OFFSET: GMT +1
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR MESSAGE: Testing error logging
+Very Good
+ERROR TARGET: Line 100
+*********************************************************************************************
+        
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 20:12:32 GMT+0100 (West Africa Standard Time); 
+TIME OFFSET: GMT +1
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR MESSAGE: Testing error logging
+Very Good
+ERROR TARGET: Line 100
+*********************************************************************************************
+        
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 20:12:49 GMT+0100 (West Africa Standard Time); 
+TIME OFFSET: GMT +1
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR MESSAGE: Testing error logging
+Very Good
+ERROR TARGET: Line 100
+*********************************************************************************************
+        
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 20:13:17 GMT+0100 (West Africa Standard Time); 
+TIME OFFSET: GMT +1
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR MESSAGE: Testing error logging
+Very Good
+ERROR TARGET: Line 100
+*********************************************************************************************
+        
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 20:13:31 GMT+0100 (West Africa Standard Time); 
+TIME OFFSET: GMT +1
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR MESSAGE: Testing error logging
+Very Good
+ERROR TARGET: Line 100
+*********************************************************************************************
+        
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 20:13:38 GMT+0100 (West Africa Standard Time); 
+TIME OFFSET: GMT +1
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR MESSAGE: Testing error logging
+Very Good
+ERROR TARGET: Line 100
+*********************************************************************************************
+        
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 20:13:44 GMT+0100 (West Africa Standard Time); 
+TIME OFFSET: GMT +1
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR MESSAGE: Testing error logging
+Very Good
+ERROR TARGET: Line 100
+*********************************************************************************************
+        
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 20:13:49 GMT+0100 (West Africa Standard Time); 
+TIME OFFSET: GMT +1
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR MESSAGE: Testing error logging
+Very Good
+ERROR TARGET: Line 100
+*********************************************************************************************
+        
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 20:13:53 GMT+0100 (West Africa Standard Time); 
+TIME OFFSET: GMT +1
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR MESSAGE: Testing error logging
+Very Good
+ERROR TARGET: Line 100
+*********************************************************************************************
+        
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 20:14:00 GMT+0100 (West Africa Standard Time); 
+TIME OFFSET: GMT +1
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR MESSAGE: Testing error logging
+Very Good
+ERROR TARGET: Line 100
+*********************************************************************************************
+        
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 20:14:04 GMT+0100 (West Africa Standard Time); 
+TIME OFFSET: GMT +1
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR MESSAGE: Testing error logging
+Very Good
+ERROR TARGET: Line 100
+*********************************************************************************************
+        
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 20:16:24 GMT+0100 (West Africa Standard Time); 
+TIME OFFSET: GMT +1
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR MESSAGE: Testing error logging
+Very Good
+ERROR TARGET: Line 100
+*********************************************************************************************
+        
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 20:16:30 GMT+0100 (West Africa Standard Time); 
+TIME OFFSET: GMT +1
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR MESSAGE: Testing error logging
+Very Good
+ERROR TARGET: Line 100
+*********************************************************************************************
+        
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 20:17:14 GMT+0100 (West Africa Standard Time); 
+TIME OFFSET: GMT +1
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR MESSAGE: Testing error logging
+Very Good
+ERROR TARGET: Line 100
+*********************************************************************************************
+        
+*********************************************************************************************
+ERROR DATE/TIME: Sat Nov 20 2021 20:17:21 GMT+0100 (West Africa Standard Time); 
+TIME OFFSET: GMT +1
+FILE NAME: errLogger.test.js;
+METHOD: test;
+ERROR MESSAGE: Testing error logging
+Very Good
+ERROR TARGET: Line 100
+*********************************************************************************************
+        
