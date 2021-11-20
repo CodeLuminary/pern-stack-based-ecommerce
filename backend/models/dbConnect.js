@@ -30,3 +30,5 @@ class dbConnect{
         this.client.end;
     }
 }
+
+module.exports = dbConnect;
