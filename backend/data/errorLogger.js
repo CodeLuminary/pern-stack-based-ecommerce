@@ -1,12 +1,16 @@
 const fs = require('fs');
 
 const writeError = async (errorText) =>{
-    fs.writeFile('errors.txt', errorText,(err)=>{
+    return new Promise((resolve,reject)=>{
+        fs.appendFile('./backend/data/errors.txt', errorText,(err)=>{
         if(err){
-            return err;
+            reject(err)
         }
-        return "Write successfully";
+        resolve("Write successful");
     })
+})
 } 
+
+
 
 module.exports = writeError;
