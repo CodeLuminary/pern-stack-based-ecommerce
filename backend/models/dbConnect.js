@@ -29,17 +29,31 @@ class dbConnect{
         }
     }
 
-    queryDb = async (sql)=>{
-        return new Promise((resolve, reject)=>{
-            this.db.query(sql,(err,res)=>{
-                if(err){
-                    reject(err);
-                }
-                else{
-                    resolve(res);
-                }
+    queryDb = async (sql,value=null)=>{
+        if(value==null){
+            return new Promise((resolve, reject)=>{
+                this.db.query(sql,(err,res)=>{
+                    if(err){
+                        reject(err);
+                    }
+                    else{
+                        resolve(res);
+                    }
+                })
             })
-        })
+        }
+        else{
+            return new Promise((resolve, reject)=>{
+                this.db.query(sql,value,(err,res)=>{
+                    if(err){
+                        reject(err);
+                    }
+                    else{
+                        resolve(res);
+                    }
+                })
+            })
+        }
     }
 
     getAllData = async (table)=>{
@@ -49,13 +63,18 @@ class dbConnect{
     insertData = async (table, data)=>{
         let sql = "INSERT INTO " + table + " (";
         let sqlvalues = "";
+        let sqlvaluesArray = [];
+        let cnt = 1;
         for(tableColumn in data){
-            sql += tableColumn + ", ";           
-            sqlvalues += typeof data[tableColumn] === 'string' ? "'" + data[tableColumn] + "', " : data[tableColumn];
-        }
+            sql += tableColumn.toString() + ", ";           
+            //sqlvalues += typeof data[tableColumn] === 'string' ? "'" + data[tableColumn] + "', " : data[tableColumn];
+            sqlvalues += "$" + cnt.toString() + ", ";
+            sqlvaluesArray.push(data[tableColumn]);
 
-        sql = sql.slice(0, -2) + ") VALUES (" + sqlvalues.slice(0,-2) + ");";
-        return this.queryDb(sql);
+            cnt++;
+        }
+        sql = sql.slice(0, -2) + ") VALUES (" + sqlvalues.slice(0,-2) + ") RETURNING *";
+        return this.queryDb(sql, sqlvaluesArray);
     }
 
     closeConnection = async ()=>{
