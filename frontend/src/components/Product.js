@@ -8,3 +8,5 @@ const Product=({productProperties})=>{
         </div>
     );
 }
+
+export default Product;
