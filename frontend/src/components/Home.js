@@ -4,6 +4,7 @@ import { useEffect,useState} from "react";
 import api from '../Api'
 import { setProducts } from "../redux/reducers/productsReducer";
 import Product from "./Product";
+import {Link} from "react-router-dom";
 
 const Home = () =>{
     const products = useSelector((state)=>state.products.value);
@@ -34,7 +35,10 @@ const Home = () =>{
             loadingState=="error" ?
                 (<h1>Error loading products</h1>) :
                 (products.map((product)=>(
-                            <Product productProperties={product} />
+                            <Link to={`/product/${product.id}`}>
+                                <Product productProperties={product} />
+                                <link to={`/product/${product.id}`}>View</link>
+                            </Link>
                         )
                     )
                 )   
