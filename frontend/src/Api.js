@@ -5,7 +5,6 @@
         if(!isDomainUsed){
             url = restApi.domain + url;
         }
-        console.log("gogle")
         return fetch(url, {
             method: 'POST',
             mode: 'cors',
