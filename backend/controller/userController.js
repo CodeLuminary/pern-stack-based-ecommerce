@@ -18,47 +18,55 @@ class userController{
         });       
     }
 
-    static registerUser = (userObject)=>{
-        try{
-            const db = new dbConnect(data.getDbData());
-            db.connectToDb();
+    static getUserDb = ()=>{
+        const db = new dbConnect(data.getDbData());
+        db.connectToDb();
+        return db;
+    }
 
-            let sql = `SELECT * FROM users WHERE email='${userObject.email}';`
-            const user = await db.queryDb(sql);
-
-            if(user.length == 0){
-                //Hash password
-                req.body.password = await security.hashString(req.body.password); 
-                req.body.userRole = "user";  
-                                  
-                const newUser = await db.insertData('users',req.body);
-
-                const token = await userController.signToken({user:newUser}, data.getSecretKey, {expiresIn: '600'});
-                res.send({
-                    isSuccessful: true,
-                    message: "User registration successful",
-                    user: {
-                        email: req.body.email,
-                        name: req.body.fullName
-                    },
-                    token: token
-                })
+    static registerUser = async (userObject,db=userController.getUserDb())=>{
+        return new Promise((resolve,reject)=>{
+            try{                   
+                let sql = `SELECT * FROM users WHERE email='${userObject.email}';`
+                const user = await db.queryDb(sql);
+    
+                if(user.length == 0){
+                    //Hash password
+                    req.body.password = await security.hashString(userObject.password); 
+                    req.body.userRole = "user";  
+                                      
+                    const newUser = await db.insertData('users',userObject);
+    
+                    const token = await userController.signToken({user:newUser}, data.getSecretKey, {expiresIn: '600'});
+                    resolve({
+                        isSuccessful: true,
+                        message: "User registration successful",
+                        user: {
+                            email: userObject.email,
+                            name: userObject.fullName
+                        },
+                        token: token
+                    });
+                }
+                else{
+                    resolve({
+                        isSuccessful:false,
+                        message: 'Action Failed. Email Already Exist'
+                    });
+                }
+                db.closeDb();
             }
-            else{
-                res.send({
-                    isSuccessful:false,
-                    message: 'Action Failed. Email Already Exist'
+            catch(errorObject){
+                errorLogger.constructDetailedError(filename, 'registerUser', errorObject);
+                reject({
+                    message: "server error"
                 });
             }
-            db.closeDb();
-        }
-        catch(errorObject){
-            errorLogger.constructDetailedError(filename, 'registerUser', errorObject);
-            res.status(503).json({
-                message: "server error"
-            });
-        }      
+        })   
+              
     }
+
+    
 }
 
 module.exports = userController;
