@@ -8,7 +8,6 @@ class security{
         return new Promise((resolve,reject)=>{
             crypt.hash(str,10, (err,hash)=>{
                 if(err){
-                    console.log(err);
                     reject(err);
                 }
                 else{
@@ -29,7 +28,7 @@ class security{
             });
         });
     }
-    static scanText(str){
+    static scanText(str){ //This method need to be refactored
         for(let i = 0; i < str.length; i++){
             for(let k = 0; k < this.symbols.length; k++){
                 if(str[i] === symbols[k]){
