@@ -1,10 +1,5 @@
 const Product=({productProperties})=>{
-    const getRating = () =>{
-        let spanArr = []
-        for(let i = 1; i <= productProperties.rating.rate.toFixed(0); i++){
-            spanArr.push('<span className="glyphicon glyphicon-star"></span>')
-        }
-    }
+    
     return (
         <div className="product">
             <img src={productProperties.image} alt={`${productProperties.name} `}/>
