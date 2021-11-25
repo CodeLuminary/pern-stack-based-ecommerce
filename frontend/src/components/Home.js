@@ -5,6 +5,7 @@ import api from '../Api'
 import { setProducts } from "../redux/reducers/productsReducer";
 import Product from "./Product";
 import {Link} from "react-router-dom";
+import Navbar from './Navbar.js'
 
 const Home = () =>{
     const products = useSelector((state)=>state.products.value);
@@ -29,24 +30,24 @@ const Home = () =>{
     
 
     return(
-        <div className="product-div col-12">
-            {loadingState==="loading" ?
-                (<h2>Loading Products</h2>) :
-            loadingState==="error" ?
-                (<h2>Error loading products</h2>) :
-                (products.map((product)=>(
-                            <Link to={`/product/${product.id}`} key={product.id}>
-                                <div className="product-parent col-lg-3 col-md-3 col-sm-4 col-xs-12">
-                                    <Product productProperties={product} />
-                                    
-                                </div>
-                            </Link>
+        <div>
+            <Navbar />
+            <div className="product-div col-12">
+                {loadingState==="loading" ?
+                    (<h2>Loading Products</h2>) :
+                loadingState==="error" ?
+                    (<h2>Error loading products</h2>) :
+                    (products.map((product)=>(
+                                <Link to={`/product/${product.id}`} key={product.id}>
+                                    <div className="product-parent col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                                        <Product productProperties={product} />
+                                        
+                                    </div>
+                                </Link>
+                            )
                         )
-                    )
-                )   
-            }
-            <div>
-
+                    )   
+                }
             </div>
         </div>
     )
