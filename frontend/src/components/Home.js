@@ -30,15 +30,15 @@ const Home = () =>{
 
     return(
         <div className="product-div">
-            {loadingState=="loading" ?
+            {loadingState==="loading" ?
                 (<h1>Loading Products</h1>) :
-            loadingState=="error" ?
+            loadingState==="error" ?
                 (<h1>Error loading products</h1>) :
                 (products.map((product)=>(
-                            <Link to={`/product/${product.id}`}>
-                                <div className="product-parent">
+                            <Link to={`/product/${product.id}`} key={product.id}>
+                                <div className="product-parent col-lg-3 col-md-3 col-sm-4 col-xs-12">
                                     <Product productProperties={product} />
-                                    <link to={`/product/${product.id}`}>View</link>
+                                    
                                 </div>
                             </Link>
                         )
@@ -48,7 +48,6 @@ const Home = () =>{
             <div>
 
             </div>
-            <h1>Good</h1>
         </div>
     )
 }
