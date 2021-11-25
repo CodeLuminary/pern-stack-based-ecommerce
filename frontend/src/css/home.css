@@ -1,13 +1,24 @@
 .product > img{
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
     width: 100%;
     height: 200px;
+    border-bottom: 2px solid #d9d9d9;
 }
+.product span, .product p{padding: 5px 15px}
+.product span{display: inline-block;}
 .product{
-    border-radius: 5px;
+    border-radius: 10px;
     width: 100%;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    height: 330px
 }
 .product-parent{
     padding: 10px;
 }
-.productName{font-size: 16px;}
+.productName{font-size: 16px;color: #333}
+.productPrice{color:#000;font-weight: bold;}
+.product-div{
+    background-color: #f2f2f2;
+    padding-top: 10px;
+}

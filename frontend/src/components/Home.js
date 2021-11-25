@@ -29,11 +29,11 @@ const Home = () =>{
     
 
     return(
-        <div className="product-div">
+        <div className="product-div col-12">
             {loadingState==="loading" ?
-                (<h1>Loading Products</h1>) :
+                (<h2>Loading Products</h2>) :
             loadingState==="error" ?
-                (<h1>Error loading products</h1>) :
+                (<h2>Error loading products</h2>) :
                 (products.map((product)=>(
                             <Link to={`/product/${product.id}`} key={product.id}>
                                 <div className="product-parent col-lg-3 col-md-3 col-sm-4 col-xs-12">
