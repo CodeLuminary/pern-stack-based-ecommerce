@@ -36,8 +36,10 @@ const Home = () =>{
                 (<h1>Error loading products</h1>) :
                 (products.map((product)=>(
                             <Link to={`/product/${product.id}`}>
-                                <Product productProperties={product} />
-                                <link to={`/product/${product.id}`}>View</link>
+                                <div className="product-parent">
+                                    <Product productProperties={product} />
+                                    <link to={`/product/${product.id}`}>View</link>
+                                </div>
                             </Link>
                         )
                     )

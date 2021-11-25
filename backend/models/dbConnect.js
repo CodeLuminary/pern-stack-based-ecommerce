@@ -60,7 +60,7 @@ class dbConnect{
         return await this.queryDb(`SELECT * FROM ${table}`);
     }
 
-    insertData = async (table, data)=>{
+    insertData = (table, data)=>{
         let sql = "INSERT INTO " + table + " (";
         let sqlvalues = "";
         let sqlvaluesArray = [];
