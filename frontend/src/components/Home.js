@@ -25,7 +25,12 @@ const Home = () =>{
     }
 
     useEffect(()=>{
-        fetchProducts();
+        if(products.length == 0){
+            fetchProducts();
+        }
+        else{
+            setLoadingState("ready")
+        }
     },[]);
     
 
