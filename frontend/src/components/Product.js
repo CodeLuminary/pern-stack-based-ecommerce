@@ -12,6 +12,7 @@ const Product=({productProperties})=>{
                 <span className={`glyphicon ${productProperties.rating.rate.toFixed() >= 4 ? 'glyphicon-star' : 'glyphicon-star-empty'}`}></span>
                 <span className={`glyphicon ${productProperties.rating.rate.toFixed() >= 5 ? 'glyphicon-star' : 'glyphicon-star-empty'}`}></span>
             </p>
+            <p className="desciption">${productProperties.description}</p>
         </div>
     );
 }
