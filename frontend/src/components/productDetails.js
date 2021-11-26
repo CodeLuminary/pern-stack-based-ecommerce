@@ -4,7 +4,7 @@ import { useEffect,useState} from "react";
 import api from '../Api'
 import { setProducts } from "../redux/reducers/productsReducer";
 import {Link, useParams} from "react-router-dom";
-import Navbar from './Navbar.js'
+import Navbar from './Navbar.js';
 
 const ProductDetails = () =>{
     const products = useSelector((state)=>state.products.value);
@@ -40,7 +40,7 @@ const ProductDetails = () =>{
             <div className="product-details-content">                
                 {
                     loadingState==="loading" ?
-                    (<h2>Loading Products</h2>) :
+                    (<h2>Loading Product</h2>) :
                     loadingState==="error" ?
                     (<h2>Error loading products</h2>) :
                     <Product />

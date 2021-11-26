@@ -6,7 +6,7 @@ export const productsSlice = createSlice({
     reducers: {
         setProducts:(state,action)=>{
             state.value = action.payload
-        },       
+        }     
     }
 });
 
