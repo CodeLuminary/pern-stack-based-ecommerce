@@ -5,7 +5,7 @@ import api from '../Api'
 import { setProducts } from "../redux/reducers/productsReducer";
 import {useParams} from "react-router-dom";
 import Navbar from './Navbar.js';
-import "../css/productDetails.css"
+import detailscss from "../css/productDetails.module.css"
 
 const ProductDetails = () =>{
     const products = useSelector((state)=>state.products.value);
@@ -56,13 +56,13 @@ const ProductDetails = () =>{
     return (
         <div>
             <Navbar />
-            <div className="product-details-content">                
+            <div className={detailscss.product_details_content}>                
                 {
                     loadingState==="loading" ?
                     (<h2>Loading Product</h2>) :
                     loadingState==="error" ?
                     (<h2>Error loading products</h2>) :
-                    <Product productProperties={products[id]}/>
+                    <Product productProperties={products[id]} css={detailscss}/>
                 }
             </div>
         </div>

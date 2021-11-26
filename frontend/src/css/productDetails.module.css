@@ -1,4 +1,4 @@
-.product-details-content{
+.product_details_content{
     background-color: rgba(242,242,242,0.5);
 }
 .product img{
@@ -8,4 +8,10 @@
 }
 .product > div{
     float: left;
+    width: calc(100% - 200px);
+    padding: 20px 10px;
+}
+.product .productName{
+    font-size: 22px;
+    font-weight: bold;
 }
