@@ -1,4 +1,4 @@
-import "../css/home.css";
+import homecss from "../css/home.module.css";
 import { useDispatch,useSelector } from "react-redux";
 import { useEffect,useState} from "react";
 import api from '../Api'
@@ -15,9 +15,9 @@ const Home = () =>{
     const fetchProducts = async () =>{
         api.getApi('https://fakestoreapi.com/products')
         .then(response=>response.json())
-        .then(result=>{
-            setLoadingState("ready")
+        .then(result=>{          
             dispatch(setProducts(result))
+            setLoadingState("ready")
         })
         .catch(err=>{
             setLoadingState("error");
@@ -37,15 +37,15 @@ const Home = () =>{
     return(
         <div>
             <Navbar />
-            <div className="product-div col-12">
+            <div className={`${homecss.product_div} col-12`}>
                 {loadingState==="loading" ?
                     (<h2>Loading Products</h2>) :
                 loadingState==="error" ?
                     (<h2>Error loading products</h2>) :
                     (products.map((product)=>(
                                 <Link to={`/product/${product.id}`} key={product.id}>
-                                    <div className="product-parent col-lg-3 col-md-3 col-sm-4 col-xs-12">
-                                        <Product productProperties={product} />
+                                    <div className={`${homecss.product_parent} col-lg-3 col-md-3 col-sm-4 col-xs-12`}>
+                                        <Product productProperties={product} css={homecss}/>
                                         
                                     </div>
                                 </Link>
