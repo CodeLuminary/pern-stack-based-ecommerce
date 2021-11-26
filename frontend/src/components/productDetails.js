@@ -3,8 +3,9 @@ import { useDispatch,useSelector } from "react-redux";
 import { useEffect,useState} from "react";
 import api from '../Api'
 import { setProducts } from "../redux/reducers/productsReducer";
-import {Link, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import Navbar from './Navbar.js';
+import "../css/productDetails.css"
 
 const ProductDetails = () =>{
     const products = useSelector((state)=>state.products.value);
@@ -23,6 +24,24 @@ const ProductDetails = () =>{
             setLoadingState("error");
         })
     }
+
+    const searchProductById = (id)=>{
+        let beginning = 0; let end = products.length-1;
+        
+        while(beginning <= end){
+            let middle = Math.floor((end - beginning)/2);
+
+            if(products[middle].id === id){
+                return products[middle];
+            }
+            else if(id < products[middle].id){
+                end = middle;
+            }
+            else{
+                beginning = middle
+            }
+        }
+    } 
 
     useEffect(()=>{
         if(products.length == 0){
@@ -43,7 +62,7 @@ const ProductDetails = () =>{
                     (<h2>Loading Product</h2>) :
                     loadingState==="error" ?
                     (<h2>Error loading products</h2>) :
-                    <Product />
+                    <Product productProperties={searchProductById(id)}/>
                 }
             </div>
         </div>
