@@ -5,6 +5,7 @@
     align-items: center;
     padding: 1rem;
     z-index: 50;
+    margin: 0px !important;
   }
   
   .navbar__logo h2 {

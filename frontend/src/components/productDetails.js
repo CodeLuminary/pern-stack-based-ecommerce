@@ -17,8 +17,8 @@ const ProductDetails = () =>{
         api.getApi('https://fakestoreapi.com/products')
         .then(response=>response.json())
         .then(result=>{
-            setLoadingState("ready")
             dispatch(setProducts(result))
+            setLoadingState("ready")
         })
         .catch(err=>{
             setLoadingState("error");
@@ -44,7 +44,7 @@ const ProductDetails = () =>{
     } 
 
     useEffect(()=>{
-        if(products.length == 0){
+        if(products.length === 0){
             fetchProducts();
         }
         else{
@@ -62,7 +62,7 @@ const ProductDetails = () =>{
                     (<h2>Loading Product</h2>) :
                     loadingState==="error" ?
                     (<h2>Error loading products</h2>) :
-                    <Product productProperties={searchProductById(id)}/>
+                    <Product productProperties={products[id]}/>
                 }
             </div>
         </div>
