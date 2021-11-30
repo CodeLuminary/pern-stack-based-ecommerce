@@ -27,20 +27,20 @@ const ProductDetails = () =>{
 
     const searchProductById = (id)=>{
         let beginning = 0; let end = products.length-1;
-        
         while(beginning <= end){
-            let middle = Math.floor((end - beginning)/2);
+            let middle = beginning + Math.floor((end - beginning)/2);
 
-            if(products[middle].id === id){
+            if(products[middle].id === Number(id)){
                 return products[middle];
             }
-            else if(id < products[middle].id){
-                end = middle;
+            else if(products[middle].id < id){              
+                beginning = middle + 1
             }
             else{
-                beginning = middle
+                end = middle - 1;
             }
         }
+        return products[0];
     } 
 
     useEffect(()=>{
@@ -56,13 +56,13 @@ const ProductDetails = () =>{
     return (
         <div>
             <Navbar />
-            <div className={detailscss.product_details_content}>                
+            <div className={`${detailscss.product_details_content} col-12`}>                
                 {
                     loadingState==="loading" ?
                     (<h2>Loading Product</h2>) :
                     loadingState==="error" ?
                     (<h2>Error loading products</h2>) :
-                    <Product productProperties={products[id]} css={detailscss}/>
+                    <Product productProperties={searchProductById(id)} css={detailscss}/>
                 }
             </div>
         </div>

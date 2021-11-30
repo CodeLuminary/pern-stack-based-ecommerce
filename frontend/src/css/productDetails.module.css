@@ -1,5 +1,7 @@
 .product_details_content{
     background-color: rgba(242,242,242,0.5);
+    padding: 20px 10%;
+    float:left;
 }
 .product img{
     width: 200px;
@@ -10,8 +12,10 @@
     float: left;
     width: calc(100% - 200px);
     padding: 20px 10px;
+
 }
 .product .productName{
     font-size: 22px;
     font-weight: bold;
 }
+.product{background-color: #fff;width: 100%;float:left;}
