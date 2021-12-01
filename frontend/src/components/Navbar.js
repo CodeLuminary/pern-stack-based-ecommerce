@@ -13,10 +13,11 @@ const Navbar = ({click}) =>{
                 <div></div>
             </div>
       <div className="navbar__logo">
-        <h2>PERN Shopping Cart</h2>
+        <Link to="/" ><h2>PERN Shopping Cart</h2></Link>
       </div>
 
       <ul className="navbar__links">
+        <li><Link to="/">Home</Link></li>
         <li>
           <Link to="/cart" className="cart__link">
             <i className="fas fa-shopping-cart"></i>
