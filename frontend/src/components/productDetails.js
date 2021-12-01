@@ -53,6 +53,10 @@ const ProductDetails = () =>{
         //alert(id)
     },[]);
 
+    const addToCart = () =>{
+
+    }
+
     return (
         <div>
             <Navbar />
@@ -62,7 +66,7 @@ const ProductDetails = () =>{
                     (<h2>Loading Product</h2>) :
                     loadingState==="error" ?
                     (<h2>Error loading products</h2>) :
-                    <Product productProperties={searchProductById(id)} css={detailscss}/>
+                    <Product productProperties={searchProductById(id)} css={detailscss} buttonObject={{click:addToCart,text:"Add To Cart"}}/>
                 }
             </div>
         </div>

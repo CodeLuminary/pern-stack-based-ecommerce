@@ -19,3 +19,5 @@
     font-weight: bold;
 }
 .product{background-color: #fff;width: 100%;float:left;}
+.btn{background-color: #f68b1c;color: white;border-width: 0px;padding: 10px 30px; border-radius: 20px;}
+.btn:hover{border: 2px solid #f68b1c; background-color: transparent;color:#f68b1c;}

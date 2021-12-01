@@ -1,4 +1,4 @@
-const Product=({productProperties,css})=>{
+const Product=({productProperties,css,buttonObject})=>{
     
     return (
         <div className={css.product}>
@@ -14,6 +14,7 @@ const Product=({productProperties,css})=>{
                     <span className={`glyphicon ${productProperties.rating.rate.toFixed() >= 5 ? 'glyphicon-star' : 'glyphicon-star-empty'}`}></span>
                 </p>
                 <p className={css.description}>{productProperties.description}</p>
+                <button class={css.btn} onClick={buttonObject.click}>{buttonObject.text}</button>
             </div>
             
         </div>
