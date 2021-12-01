@@ -1,0 +1,7 @@
+.cart_panel{
+    background-color: rgba(242, 242, 242, 0.5);
+    padding: 40px 5%;
+}
+.item_total{
+    font-size: 20px;color: #333;font-weight: bold;
+}
