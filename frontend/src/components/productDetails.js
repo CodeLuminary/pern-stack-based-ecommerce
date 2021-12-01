@@ -6,9 +6,11 @@ import { setProducts } from "../redux/reducers/productsReducer";
 import {useParams} from "react-router-dom";
 import Navbar from './Navbar.js';
 import detailscss from "../css/productDetails.module.css"
+import { addItem } from "../redux/reducers/cartReducer";
 
 const ProductDetails = () =>{
     const products = useSelector((state)=>state.products.value);
+    const cart = useSelector((state)=>state.cart)
     const dispatch = useDispatch();
     const [loadingState, setLoadingState] = useState("loading");
     const {id} = useParams();
@@ -53,8 +55,20 @@ const ProductDetails = () =>{
         //alert(id)
     },[]);
 
-    const addToCart = () =>{
+    const searchForProductInCart = (id) =>{
+        for(let i = 0; i < cart.total; i++){
+            if(cart.value[i].id===id){
+                return i;
+            }
+        }
+        return -1;
+    }
 
+    const addToCart = () =>{
+        const cartResult = searchForProductInCart(Number(id));
+        if(cartResult === -1){
+            dispatch(addItem(searchProductById(id)))
+        }    
     }
 
     return (
