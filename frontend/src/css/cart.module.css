@@ -5,3 +5,8 @@
 .item_total{
     font-size: 20px;color: #333;font-weight: bold;
 }
+.cart_item_div{
+    margin-top: 10px;
+    background-color: #fff;
+    position:relative;
+}
