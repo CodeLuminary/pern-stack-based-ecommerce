@@ -10,11 +10,11 @@ export const cartSlice = createSlice({
             state.value= [
                 ...state.value,
                 {
-                    id: ++lastId,
-                    productId: action.payload.id,
-                    name: action.payload.name,
+                    cartId: ++lastId,
+                    id: action.payload.id,
+                    title: action.payload.title,
                     quantity: action.payload.quantity,
-                    amount: action.payload.amount,
+                    price: action.payload.title,
                     description: action.payload.description
                 }
             ];
