@@ -11,6 +11,7 @@ export const cartSlice = createSlice({
                 ...state.value,
                 {
                     id: ++lastId,
+                    productId: action.payload.id,
                     name: action.payload.name,
                     quantity: action.payload.quantity,
                     amount: action.payload.amount,

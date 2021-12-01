@@ -14,7 +14,7 @@ const Product=({productProperties,css,buttonObject})=>{
                     <span className={`glyphicon ${productProperties.rating.rate.toFixed() >= 5 ? 'glyphicon-star' : 'glyphicon-star-empty'}`}></span>
                 </p>
                 <p className={css.description}>{productProperties.description}</p>
-                <button class={css.btn} onClick={buttonObject.click}>{buttonObject.text}</button>
+                <button class="btn" onClick={buttonObject.click}>{buttonObject.text}</button>
             </div>
             
         </div>
