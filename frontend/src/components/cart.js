@@ -20,6 +20,8 @@ const Cart = () =>{
                     (<div className={`${cartcss.cart_title} col-12`}>
                         <span>Item</span>
                         <span>Price</span>
+                        <span>Quantity</span>
+                        <span>Sub total</span>
                     </div>
                     )
                 }
@@ -27,6 +29,12 @@ const Cart = () =>{
                     (cart.value.map((cart_item)=>(
                         <div className={`${cartcss.cart_item_div} col-12`} key={cart_item.id}>
                             <Product productProperties={cart_item} css={cartcss} buttonObject={{click:removeItemFromCart,text:"Remove Item"}}/>
+                            <div className={cartcss.quantity}>
+                                <div>
+                                    <input className={cartcss.quantity_input} type="text" />
+                                </div>
+                                <div>sub total</div>
+                            </div>
                         </div>
                     )))
                 }
