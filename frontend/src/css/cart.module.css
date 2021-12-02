@@ -1,14 +1,14 @@
 .cart_panel{
-    background-color: rgba(242, 242, 242, 0.5);
+    background-color: var(--very-light-gray);
     padding: 40px 5%;
     float: left;
 }
 .item_total{
-    font-size: 20px;color: #333;font-weight: bold;
+    font-size: 20px;color: var(--light-mode-text-color);font-weight: bold;
 }
 .cart_item_div{
     margin-top: 20px;
-    background-color: #fff;
+    background-color: var(--light-mode-color);
     position:relative;
     
 }
@@ -23,12 +23,12 @@
     width: calc(100% - 400px);
     padding: 20px;
     height: 160px;
-    border-right: 1px solid #f2f2f2;
+    border-right: 1px solid var(--light-gray);
 }
 .product .productName{
     font-size: 22px;
     font-weight: bold;
 }
 .description,.star{display:none}
-.product{background-color: #fff;width: 100%;float:left;}
+.product{background-color: var(--light-mode-color);width: 100%;float:left;}
 .product .buttonParagraph{position: absolute; bottom: 0px; width: 100%}
