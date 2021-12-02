@@ -3,11 +3,12 @@
     padding: 40px 5%;
     float: left;
 }
+.cart_title{float: left;}
 .item_total{
     font-size: 20px;color: var(--light-mode-text-color);font-weight: bold;
 }
 .cart_item_div{
-    margin-top: 20px;
+    margin-bottom: 20px;
     background-color: var(--light-mode-color);
     position:relative;
     
@@ -23,6 +24,7 @@
     width: calc(100% - 400px);
     padding: 20px;
     height: 160px;
+    position: relative;
     border-right: 1px solid var(--light-gray);
 }
 .product .productName{
@@ -32,3 +34,11 @@
 .description,.star{display:none}
 .product{background-color: var(--light-mode-color);width: 100%;float:left;}
 .product .buttonParagraph{position: absolute; bottom: 0px; width: 100%}
+.productPrice{
+    position: absolute;
+    right: -90px;top: 0px;padding: 20px;
+    font-size: 22px;
+    display: inline-block;
+    height: 160px;
+    border-right: 1px solid var(--light-gray);
+}

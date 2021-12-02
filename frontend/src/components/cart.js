@@ -16,6 +16,12 @@ const Cart = () =>{
             <Navbar /> 
             <div className={`${cartcss.cart_panel} col-12`}>
                 <p className={cartcss.item_total}>Cart ({`${cart.total} ${cart.total <= 1 ? "item": "items"}`})</p>
+                {cart.value.length <= 0 ? "" : 
+                    (<div className={`${cartcss.cart_title} col-12`}>
+                        <span>Item</span>
+                    </div>
+                    )
+                }
                 {
                     (cart.value.map((cart_item)=>(
                         <div className={`${cartcss.cart_item_div} col-12`} key={cart_item.id}>
