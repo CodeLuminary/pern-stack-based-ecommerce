@@ -10,21 +10,25 @@
     margin-top: 20px;
     background-color: #fff;
     position:relative;
-    padding: 20px;
+    
 }
 .product img{
-    width: 200px;
-    height: 250px;
+    width: 100px;
+    height: 120px;
     float: left;
+    margin: 20px;
 }
 .product > div{
     float: left;
-    width: calc(100% - 200px);
-    padding: 20px 10px;
-
+    width: calc(100% - 400px);
+    padding: 20px;
+    height: 160px;
+    border-right: 1px solid #f2f2f2;
 }
 .product .productName{
     font-size: 22px;
     font-weight: bold;
 }
+.description,.star{display:none}
 .product{background-color: #fff;width: 100%;float:left;}
+.product .buttonParagraph{position: absolute; bottom: 0px; width: 100%}

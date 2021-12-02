@@ -14,7 +14,7 @@ const Cart = () =>{
     return (
         <div>
             <Navbar /> 
-            <div className={cartcss.cart_panel}>
+            <div className={`${cartcss.cart_panel} col-12`}>
                 <p className={cartcss.item_total}>Cart ({`${cart.total} ${cart.total <= 1 ? "item": "items"}`})</p>
                 {
                     (cart.value.map((cart_item)=>(
