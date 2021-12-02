@@ -14,7 +14,7 @@ export const cartSlice = createSlice({
                     id: action.payload.id,
                     title: action.payload.title,
                     quantity: action.payload.quantity,
-                    price: action.payload.title,
+                    price: action.payload.price,
                     description: action.payload.description,
                     rating: action.payload.rating,
                     image: action.payload.image

@@ -1,12 +1,30 @@
 .cart_panel{
     background-color: rgba(242, 242, 242, 0.5);
     padding: 40px 5%;
+    float: left;
 }
 .item_total{
     font-size: 20px;color: #333;font-weight: bold;
 }
 .cart_item_div{
-    margin-top: 10px;
+    margin-top: 20px;
     background-color: #fff;
     position:relative;
+    padding: 20px;
 }
+.product img{
+    width: 200px;
+    height: 250px;
+    float: left;
+}
+.product > div{
+    float: left;
+    width: calc(100% - 200px);
+    padding: 20px 10px;
+
+}
+.product .productName{
+    font-size: 22px;
+    font-weight: bold;
+}
+.product{background-color: #fff;width: 100%;float:left;}

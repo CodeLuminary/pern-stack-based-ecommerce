@@ -18,7 +18,7 @@ const Cart = () =>{
                 <p className={cartcss.item_total}>Cart ({`${cart.total} ${cart.total <= 1 ? "item": "items"}`})</p>
                 {
                     (cart.value.map((cart_item)=>(
-                        <div className={cartcss.cart_item_div} key={cart_item.id}>
+                        <div className={`${cartcss.cart_item_div} col-12`} key={cart_item.id}>
                             <Product productProperties={cart_item} css={cartcss} buttonObject={{click:removeItemFromCart,text:"Remove Item"}}/>
                         </div>
                     )))
