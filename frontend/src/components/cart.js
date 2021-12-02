@@ -11,17 +11,19 @@ const Cart = () =>{
 
     }
 
+    alert(cart.value[0].title)
+
     return (
         <div>
-            <Navbar />
+            <Navbar /> 
             <div className={cartcss.cart_panel}>
                 <p className={cartcss.item_total}>Cart ({`${cart.total} ${cart.total <= 1 ? "item": "items"}`})</p>
                 {
-                    (cart.value.map((cart_item)=>{
-                        <div className={cartcss.cart_item_div} key={cart_item.id}>
+                    (cart.value.map((cart_item)=>(
+                        <div className={cartcss.cart_item_div} key={cart_item.id}>Good
                             <Product productProperties={cart_item} css={cartcss} buttonObject={{click:removeItemFromCart,text:"Remove Item"}}/>
                         </div>
-                    }))
+                    )))
                 }
             </div>
         </div>
