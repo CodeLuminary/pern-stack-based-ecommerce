@@ -1,0 +1,10 @@
+:root{
+    --primary-color: #f68b1c;
+    --light-mode-color: #fff;
+    --dark-mode-color:#000;
+    --light-mode-text-color: #333;
+    --dark-mode-text-color: #fdfdfd;
+    --very-light-gray: rgba(242,242,242,0.5);
+    --light-gray: #f2f2f2;
+    --gray: #d9d9d9;
+}

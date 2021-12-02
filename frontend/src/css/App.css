@@ -1,3 +1,4 @@
+@import url("./constants/site_contants.css");
 body {
   margin: 0px !important;
   padding: 0px !important;
@@ -260,5 +261,5 @@ body {
       width: 100%
   }
 }
-.btn{background-color: #f68b1c;color: white;border-width: 0px;padding: 10px 30px; border-radius: 20px;outline:none !important}
-.btn:hover{border: 2px solid #f68b1c; background-color: transparent;color:#f68b1c;}
+.btn{background-color: var(--primary-color);color: white;border-width: 0px;padding: 10px 30px; border-radius: 20px;outline:none !important}
+.btn:hover{border: 2px solid var(--primary-color); background-color: transparent;color: var(--primary-color);}
