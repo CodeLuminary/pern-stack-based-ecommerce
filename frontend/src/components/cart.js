@@ -11,8 +11,6 @@ const Cart = () =>{
 
     }
 
-    alert(cart.value[0].title)
-
     return (
         <div>
             <Navbar /> 
@@ -20,7 +18,7 @@ const Cart = () =>{
                 <p className={cartcss.item_total}>Cart ({`${cart.total} ${cart.total <= 1 ? "item": "items"}`})</p>
                 {
                     (cart.value.map((cart_item)=>(
-                        <div className={cartcss.cart_item_div} key={cart_item.id}>Good
+                        <div className={cartcss.cart_item_div} key={cart_item.id}>
                             <Product productProperties={cart_item} css={cartcss} buttonObject={{click:removeItemFromCart,text:"Remove Item"}}/>
                         </div>
                     )))
