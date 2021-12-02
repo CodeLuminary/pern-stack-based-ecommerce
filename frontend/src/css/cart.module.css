@@ -1,9 +1,14 @@
+:root{
+    --item-width:calc(100% - 400px)
+}
 .cart_panel{
     background-color: var(--very-light-gray);
     padding: 40px 5%;
     float: left;
 }
 .cart_title{float: left;}
+.cart_title span{float: left;}
+.cart_title > span:first-child{width: var(--item-width);margin-right: 160px;}
 .item_total{
     font-size: 20px;color: var(--light-mode-text-color);font-weight: bold;
 }
@@ -21,7 +26,7 @@
 }
 .product > div{
     float: left;
-    width: calc(100% - 400px);
+    width: var(--item-width);
     padding: 20px;
     height: 160px;
     position: relative;

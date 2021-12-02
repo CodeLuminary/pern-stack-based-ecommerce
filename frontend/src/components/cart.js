@@ -19,6 +19,7 @@ const Cart = () =>{
                 {cart.value.length <= 0 ? "" : 
                     (<div className={`${cartcss.cart_title} col-12`}>
                         <span>Item</span>
+                        <span>Price</span>
                     </div>
                     )
                 }
