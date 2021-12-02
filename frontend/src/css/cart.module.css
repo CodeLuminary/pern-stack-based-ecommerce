@@ -52,7 +52,7 @@
 }
 .quantity{
     position: absolute;
-    left: calc(100% - 300px);width: 300px;
+    left: calc(100% - 250px);width: 250px;
     height: var(--cart-height);
 }
 .quantity > div{

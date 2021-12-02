@@ -31,7 +31,7 @@ const Cart = () =>{
                             <Product productProperties={cart_item} css={cartcss} buttonObject={{click:removeItemFromCart,text:"Remove Item"}}/>
                             <div className={cartcss.quantity}>
                                 <div>
-                                    <input className={cartcss.quantity_input} type="text" />
+                                    <input style={{width: 60}} className={cartcss.quantity_input} type="number" />
                                 </div>
                                 <div>sub total</div>
                             </div>
