@@ -2,7 +2,7 @@ import './css/App.css';
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import Home from './components/Home.js';
-import Admin from './components/admin/router'
+import Admin from './components/admin/dashboard';
 import ProductDetails from './components/productDetails';
 import Cart from './components/cart';
 
