@@ -1,5 +1,4 @@
-
-##Ecommerce website using Postgre, express, react and Node
+## Ecommerce website using Postgre, express, react and Node
 
 ## Start Development
 
