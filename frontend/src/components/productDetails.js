@@ -7,6 +7,7 @@ import {useParams} from "react-router-dom";
 import Navbar from './Navbar.js';
 import detailscss from "../css/productDetails.module.css"
 import { addItem } from "../redux/reducers/cartReducer";
+import modal from "../modal"
 
 const ProductDetails = () =>{
     const products = useSelector((state)=>state.products.value);
