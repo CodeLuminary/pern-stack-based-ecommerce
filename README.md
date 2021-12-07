@@ -47,7 +47,7 @@ cd to the frontend folder in your terminal and enter the following command
 npm start
 ```
 
-You can access the project in your browser by entering - `http://localhost:3000`
+You can access the project in your browser by entering - `localhost:3000`
 
 
 
@@ -59,7 +59,14 @@ cd to the backend folder in your terminal and enter the following command
 npm start
 ```
 
-You can access the project in your browser by entering - `http://localhost:5000`
+## TEST
+
+### TEST BACKEND PROJECT
+
+cd to the backend folder in your terminal and enter the following command
+```
+npm run test
+```
 
 ## 🎩 Author
 
