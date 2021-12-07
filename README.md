@@ -11,14 +11,14 @@ Kindly clone the repo
 cd or navigate to the frontend folder in your terminal and enter the following command 
 
 ```
-$ npm install
+npm install
 ```
 ### BACKEND INSTALLATION
 
 cd or navigate to the backend folder in your terminal and enter the following command
 
 ``` 
-$ npm install
+npm install
 ```
 
 ## Setup
@@ -44,8 +44,10 @@ SKIP_PREFLIGHT_CHECK=true
 cd to the frontend folder in your terminal and enter the following command
 
 ```
-$ npm start
+npm start
 ```
+
+You can access the project in your browser by entering - `localhost:3000`
 
 
 ## 🎩 Author
