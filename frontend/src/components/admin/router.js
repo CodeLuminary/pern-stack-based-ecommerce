@@ -9,12 +9,12 @@ const router = () =>{
         <div>
             <Sidebar />
             <div className={admincss.content}>
-                <div class="nav_top">
-                    <div><span id="uName" class="uName"><i class="fa fa-user"></i>&nbsp;John Doe</span><span className={admincss.logout} onclick="logout()" class="logou"><i class="fa fa-sign-out"></i>&nbsp;Log Out</span></div>        
+                <div className={admincss.nav_top}>
+                    <div><span className="uName"><i class="fa fa-user"></i>&nbsp;John Doe</span><span className={admincss.logout} onclick="logout()" class="logou"><i class="fa fa-sign-out"></i>&nbsp;Log Out</span></div>        
                 </div>
                 <div className={admincss.app}>
                 <Routes>
-                    <Route path="/" element={<Dashboard />} />
+                    <Route index element={<Dashboard />} />
                     <Route path="products/add" element={<AddProduct />}/>
                     <Route path="products/view" element={<ViewProducts />} />
                 </Routes>

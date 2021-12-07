@@ -34,10 +34,3 @@ a {
 .menuDet{position: absolute; right: -13px; top: 30px;z-index: 10000;}
 .menuDet button{outline: none !important;border: 1px solid var(--main-color); width: 32px;height: 32px;text-align: center;border-radius: 16px;font-size: larger;background-color: var(--bac-main-color);color: var(--main-color);font-weight: bold;cursor: pointer;}
 .menuDet > button:last-child{display: none;}
-.nav_top{color: var(--main-color);width:100%;height: 65px;padding-top:10px;position: relative;border-bottom: 1px solid #d9d9d9;}
-.nav_top > div{width: 320px;right:0px;position: absolute;padding: 15px 20px 20px;padding-right: 0px;background-color: var(--bac-main-color);} 
-.nav_top span{display: inline-block;font-size: 18px;}
-.content{float:left;width: calc(100% - var(--nav-width));height: 100vh;margin-left: var(--nav-width);}
-.highlight{color: var(--main-color); background-color: var(--bac-main-color);}
-.nav__link > span:first-child{width: 5px;height: 17px;display: inline-block;position:absolute;left: 0px;bottom: 15px;background-color: var(--main-color);}
-.nav__link > i{margin-right: 5px;}
