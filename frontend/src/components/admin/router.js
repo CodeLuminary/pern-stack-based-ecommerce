@@ -10,7 +10,7 @@ const router = () =>{
             <Sidebar />
             <div className={admincss.content}>
                 <div className={admincss.nav_top}>
-                    <div><span className="uName"><i class="fa fa-user"></i>&nbsp;John Doe</span><span className={admincss.logout} onclick="logout()" class="logou"><i class="fa fa-sign-out"></i>&nbsp;Log Out</span></div>        
+                    <div><span className="uName"><i className="fa fa-user"></i>&nbsp;John Doe</span><span className={admincss.logout} Onclick={()=>{}} className="logou"><i class="fa fa-sign-out"></i>&nbsp;Log Out</span></div>        
                 </div>
                 <div className={admincss.app}>
                 <Routes>
