@@ -2,7 +2,7 @@
 
 ## Start Development
 
-Kindly clone the repo 
+Kindly fork and clone the repo 
 
 ## Installation
 
@@ -71,3 +71,5 @@ npm run test
 ## 🎩 Author
 
 - IJONI VICTOR 😁😁😁
+
+> Don't forget to star the project 😁😁 . Thanks
