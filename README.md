@@ -11,12 +11,13 @@ Kindly clone the repo
 ```
 $ npm install
 ```
-# BACKEND INSTALLATION
-### cd or navigate to the backend folder in your terminal and enter the following command 
+### BACKEND INSTALLATION
+> cd or navigate to the backend folder in your terminal and enter the following command
+``` 
 $ npm install
 ```
 
-### Setup
+## Setup
 
 Create a .env file in the root directory of the backend folder and add the following properties
 
