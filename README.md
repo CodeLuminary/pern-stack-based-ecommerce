@@ -2,12 +2,11 @@
 
 ## Start Development
 
-Kindly clone the repo ``
+Kindly clone the repo 
 
+## Installation
 
-# Installation
-
-## FRONTEND INSTALLATION
+### FRONTEND INSTALLATION
 > cd or navigate to the frontend folder in your terminal and enter the following command 
 ```
 $ npm install
