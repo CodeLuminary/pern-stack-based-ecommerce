@@ -2,10 +2,11 @@ import './css/App.css';
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import Home from './components/Home.js';
-import Admin from './components/admin/dashboard';
+//import Admin from './components/admin/dashboard';
+import Admin from './components/admin/router'
 import ProductDetails from './components/productDetails';
 import Cart from './components/cart';
-
+import AddProduct from './components/admin/addProducts';
 
 function App() {
   return (
@@ -16,8 +17,6 @@ function App() {
         <Route path="product/:id" element={<ProductDetails />} />
         <Route path="cart" element={<Cart />} />
         <Route path="admin/*" element={<Admin />}>
-            <Route path="products/add" element={<addProduct />}/>
-            <Route path="products/view" element={<viewProducts />} />
         </Route>
       </Routes>
     </Router>
