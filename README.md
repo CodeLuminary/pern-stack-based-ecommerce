@@ -7,12 +7,16 @@ Kindly clone the repo
 ## Installation
 
 ### FRONTEND INSTALLATION
-> cd or navigate to the frontend folder in your terminal and enter the following command 
+
+cd or navigate to the frontend folder in your terminal and enter the following command 
+
 ```
 $ npm install
 ```
 ### BACKEND INSTALLATION
-> cd or navigate to the backend folder in your terminal and enter the following command
+
+cd or navigate to the backend folder in your terminal and enter the following command
+
 ``` 
 $ npm install
 ```
@@ -32,7 +36,16 @@ DB_PASSWORD = ?
 TIME_ZONE = ?
 SKIP_PREFLIGHT_CHECK=true 
 ```
----
+
+## STARTING PROJECT
+
+### STARTING FRONTEND PROJECT
+
+cd to the frontend folder in your terminal and enter the following command
+
+```
+$ npm start
+```
 
 
 ## 🎩 Author
