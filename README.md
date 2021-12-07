@@ -5,15 +5,13 @@
 Kindly clone the repo ``
 
 
-### Installation
+# Installation
 
-To install the necessary packages, in your root folder directory kindly run
-
-```bash
-# FRONTEND INSTALLATION
-### cd or navigate to the frontend folder in your terminal and enter the following command 
+## FRONTEND INSTALLATION
+> cd or navigate to the frontend folder in your terminal and enter the following command 
+```
 $ npm install
-
+```
 # BACKEND INSTALLATION
 ### cd or navigate to the backend folder in your terminal and enter the following command 
 $ npm install
