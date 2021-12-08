@@ -2,7 +2,7 @@
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    padding-top: 400px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -13,7 +13,7 @@
   }
   
   /* Modal Content */
-  .modal-content {
+  .modal_content {
     position: relative;
     background-color: #fefefe;
     margin: auto;
@@ -53,17 +53,13 @@
     cursor: pointer;
   }
   
-  .modal-header {
+  .modal_header {
     padding: 2px 16px;
-    background-color: #5cb85c;
-    color: white;
   }
   
-  .modal-body {padding: 2px 16px;}
+  .modal_body {padding: 2px 16px; text-align: center;}
   
-  .modal-footer {
+  .modal_footer {
     padding: 2px 16px;
-    background-color: #5cb85c;
-    color: white;
   }
   

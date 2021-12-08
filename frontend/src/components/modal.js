@@ -1,23 +1,20 @@
-import modal from "../css/modal.module.css";
+import modalcss from "../css/modal.module.css";
 import { useState } from "react";
 
-const Modal = ({modalObject})=>{
-    const [modalToggle, setModalToggle] = useState(false);
-    const close = () =>{
-        
-    }
+const Modal = ({modalObject, modalTogglee, closeModal})=>{
+    
 
     return (
-        <div classNme="modal" style={{display}}>
-            <div className="modal-content">
-                <div className="modal-header">
-                    <span className="close">&times;</span>
+        <div classNme={modalcss.modal} style={{display: modalTogglee?"block":"none"}}>
+            <div className={modalcss.modal_content}>
+                <div className={modalcss.modal_header}>
+                    <span className={modalcss.close} onClick={closeModal}>&times;</span>
                     <h2>{modalObject.header}</h2>
                 </div>
-                <div className="modal-body">
+                <div className={modalcss.modal_body}>
                     {modalObject.body}
                 </div>
-                <div className="modal-footer">
+                <div className={modalcss.modal_footer}>
                     <h3>{modalObject.footer}</h3>
                 </div>
             </div>
@@ -25,3 +22,5 @@ const Modal = ({modalObject})=>{
     );
 
 }
+
+export default Modal;

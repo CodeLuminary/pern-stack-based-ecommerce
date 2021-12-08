@@ -7,7 +7,7 @@ import {useParams} from "react-router-dom";
 import Navbar from './Navbar.js';
 import detailscss from "../css/productDetails.module.css"
 import { addItem } from "../redux/reducers/cartReducer";
-import modal from "../modal"
+import Modal from "./modal"
 
 const ProductDetails = () =>{
     const products = useSelector((state)=>state.products.value);
@@ -15,6 +15,7 @@ const ProductDetails = () =>{
     const dispatch = useDispatch();
     const [loadingState, setLoadingState] = useState("loading");
     const {id} = useParams();
+    const [modalToggle, setModalToggle] = useState(false);
     
     const fetchProducts = async () =>{
         api.getApi('https://fakestoreapi.com/products')
@@ -69,12 +70,14 @@ const ProductDetails = () =>{
         const cartResult = searchForProductInCart(Number(id));
         if(cartResult === -1){
             dispatch(addItem(searchProductById(id)))
+            setModalToggle(true)
         }    
     }
 
     return (
         <div>
             <Navbar />
+            <Modal modalObject={{header:"",footer:"",body:"Item added to cart successfully"}} modalTogglee={modalToggle} closeModal={() => setModalToggle(false)} />
             <div className={`${detailscss.product_details_content} col-12`}>                
                 {
                     loadingState==="loading" ?
