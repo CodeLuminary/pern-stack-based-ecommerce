@@ -5,7 +5,7 @@ const Modal = ({modalObject, modalTogglee, closeModal})=>{
     
 
     return (
-        <div classNme={modalcss.modal} style={{display: modalTogglee?"block":"none"}}>
+        <div className={modalcss.modal} style={{display: modalTogglee?"block":"none"}}>
             <div className={modalcss.modal_content}>
                 <div className={modalcss.modal_header}>
                     <span className={modalcss.close} onClick={closeModal}>&times;</span>
