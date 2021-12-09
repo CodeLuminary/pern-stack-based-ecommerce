@@ -2,7 +2,7 @@
 const dashboard = () =>{
     return (
         <div>
-            <h1>WELCOME</h1>
+            <h1 style={{color:'#f68b1c'}}>WELCOME</h1>
             <p>This is a simple e-commerce admin panel. You can perform the following task here:</p>
             <ul>
                 <li>
