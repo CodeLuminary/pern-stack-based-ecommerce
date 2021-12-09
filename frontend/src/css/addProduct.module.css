@@ -1,0 +1,10 @@
+
+.required{
+    color: var(--main-color)
+}
+.input{
+    margin: 3px 0px 10px;
+    width: 400px;
+    background: var(--light-gray);
+    border: 1px solid var(--gray)
+}

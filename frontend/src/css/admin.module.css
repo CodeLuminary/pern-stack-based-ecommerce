@@ -1,4 +1,4 @@
-/*import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"*/
+
 .logout{cursor:pointer;margin-left: 10px}
 .app {
     padding: 2em;
@@ -7,6 +7,8 @@
     height: 100vh;
     background-color: rgba(242, 242, 242, 0.1);
 }
+.required{color:var(--main-color)}
+.app h1{color: var(--main-color)}
 .nav_top{color: var(--main-color);width:100%;height: 75px;padding-top:10px;position: relative;border-bottom: 1px solid #d9d9d9;}
 .nav_top > div{width: 320px;right:0px;position: absolute;padding: 15px 20px 20px;padding-right: 0px;background-color: var(--bac-main-color);} 
 .nav_top span{display: inline-block;font-size: 18px;}
