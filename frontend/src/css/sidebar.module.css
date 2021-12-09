@@ -16,6 +16,7 @@ body {
     height: 100vh;
     background:  var(--main-color);
     padding-top: 70px;float:left;
+    z-index: 10;
 }
 .nav__link {
     display: block;
