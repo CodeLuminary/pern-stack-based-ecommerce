@@ -12,6 +12,11 @@ const AddProduct = () =>{
             <span>Product Description<span className={addPcss.required}>*</span></span><br />
             <textarea className={addPcss.input}>
             </textarea><br />
+            <span>Product Image<span className={addPcss.required}>*</span></span><br />
+            <input type="file" className={addPcss.insert} />
+            <p className={addPcss.btnP}>
+                <button className={addPcss.btn}>Add Product</button>
+            </p>
         </div>
     )
 }

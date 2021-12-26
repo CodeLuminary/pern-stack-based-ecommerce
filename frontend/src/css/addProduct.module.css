@@ -16,3 +16,16 @@ input{height: 35px;}
 textarea{
     height: 100px;
 }
+.insert{font-size: 15px;}
+.btnP{
+    width: 400px;text-align: center;
+    margin: 10px 0px 50px;
+}
+.btn{
+    color: var(--dark-mode-text-color);
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    padding: 7px 30px;
+    border-radius: 20px;
+    font-size: 15px;
+}
