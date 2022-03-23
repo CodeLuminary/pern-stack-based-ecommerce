@@ -1,6 +1,6 @@
 import "../css/navbar.css";
 import {Link} from "react-router-dom";
-import {useSelector} from 'react-redux'
+import {useSelector} from 'react-redux';
 
 const Navbar = ({click}) =>{
     const cart = useSelector((state)=> state.cart)

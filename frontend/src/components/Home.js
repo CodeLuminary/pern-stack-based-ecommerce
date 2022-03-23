@@ -10,17 +10,20 @@ import Navbar from './Navbar.js'
 const Home = () =>{
     const products = useSelector((state)=>state.products.value);
     const dispatch = useDispatch();
-    const [loadingState, setLoadingState] = useState("loading")
+    const [loadingState, setLoadingState] = useState("loading");
+    const [shouldShow, setShouldShow] = useState(true);
     
     const fetchProducts = async () =>{
         api.getApi('https://fakestoreapi.com/products')
         .then(response=>response.json())
         .then(result=>{          
-            dispatch(setProducts(result))
-            setLoadingState("ready")
+            if(shouldShow){
+                dispatch(setProducts(result))
+                setLoadingState("ready");
+            }
         })
         .catch(err=>{
-            setLoadingState("error");
+            if(shouldShow) setLoadingState("error");
         })
     }
 
@@ -29,7 +32,10 @@ const Home = () =>{
             fetchProducts();
         }
         else{
-            setLoadingState("ready")
+            if(shouldShow) setLoadingState("ready")        
+        }
+        return ()=>{
+            setShouldShow(false);
         }
     },[]);
     
