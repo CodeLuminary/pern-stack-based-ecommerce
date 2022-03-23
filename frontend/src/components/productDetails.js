@@ -60,22 +60,23 @@ const ProductDetails = () =>{
         }
     },[]);
 
-    const searchForProductInCart = (id) =>{
+    /*const searchForProductInCart = (id) =>{
         for(let i = 0; i < cart.total; i++){
             if(cart.value[i].id===id){
                 return i;
             }
         }
         return -1;
-    }
-
-    /*const addToCart = () =>{
-        const cartResult = searchForProductInCart(Number(id));
-        if(cartResult === -1){
-            dispatch(addItem(searchProductById(id)))
-            setModalToggle(true)
-        }    
     }*/
+
+    const searchForProductInCart = (id) =>{
+        for(let i = 0; i < cart.value.length; i++){
+            if(cart.value[i].id===id){
+                return i;
+            }
+        }
+        return -1;
+    }
 
     const addToCart = () =>{
         const cartResult = searchForProductInCart(Number(id));

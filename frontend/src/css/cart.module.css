@@ -42,14 +42,7 @@
 .description,.star{display:none}
 .product{background-color: var(--light-mode-color);width: 100%;float:left;}
 .product .buttonParagraph{position: absolute; bottom: 0px; width: 100%}
-.productPrice{
-    position: absolute;
-    right: -100px;top: 0px;padding: 20px;
-    font-size: 22px;
-    display: inline-block;
-    height: var(--cart-height);
-    border-right: 1px solid var(--light-gray);
-}
+
 .quantity{
     position: absolute;
     left: calc(100% - 250px);width: 250px;
@@ -65,4 +58,91 @@
 .quantity > div:last-child{width: 40%;}
 .quantiy_input, .quantity input{
     width: 50px;
+}
+.emptyCart{
+    padding: 20px;background-color: #fff; border: 1px solid #e6e6e6; border-radius: 5px;
+    text-align: center;
+}
+.emptyCart h2{
+    color: #0e2058;
+}
+.emptyCart span{
+    display: inline-block;background-color: red;width: 60px; height: 60px;border-radius: 50%;
+    padding: 15px 10px
+}
+.emptyCart .icon{font-size: 25px;color: #fff;font-weight: bold;}
+.start{
+    background-color: #0e2058;color: #fff; padding: 10px 40px; border-radius: 5px;
+    border: 2px solid #0e2058;
+}
+.start:hover{
+    background-color: #f2f2f2;color: #0e2058;
+}
+.emptyCart p{margin-top: 30px;}
+.subImg,.star{display: none;}
+
+.uCart > div{
+    padding: 10px;
+}
+.uCart >div > div{
+    background-color: #fff;padding: 10px
+}
+.uCart > div:first-child > div{
+    margin-bottom: 10px;
+}
+.cItem > img{float: left}
+.cItem > div:first-child{float: left; width: calc(100% - 120px);padding-left: 10px;}
+
+
+.productName{font-size: 18px;font-weight:bold; color: #0e2058;display: inline-block;padding-bottom: 5px;}
+.productPrice{color:#000;font-weight: bold;font-size: 16px;margin-right: 5px;}
+.reduction{
+    color: #fff;
+    background-color: var(--primary);
+    padding: 3px;
+    margin-top: 3px;
+    float: right;
+    border-radius: 3px;
+}
+
+@media screen and (min-width: 801px) {
+    .prices{
+        float: right;
+        margin-top: -22px;
+    }
+    .productName{margin-right: 90px !important;}
+}
+@media screen and (max-width: 800px) {
+    .uCart{
+        display: flex !important;
+        flex-direction: column-reverse;
+    }
+    .uCart > div{width: 100% !important; float: left;}
+    .cItem > div{width: 100%; float: left;}
+    .prices{
+        display: block;width: 100%;
+        float: left;
+    }
+    .reduction{margin-top: -23px;}
+}
+.addRemove{padding-top: 10px;width: 100%;float: left;}
+.delete{color: #595959 !important;cursor: pointer;}
+.delete span{float: left;margin-top: 3px;margin-left: 2px;}
+.addRemove .icon{font-size: 22px;float:left}
+.maddrem{float: right} .maddrem .input{float: left;width: 40px;text-align: center;}
+.maddrem .icon{
+    background-color: #0e2058;color:#fff;margin:0px 2px;border-radius: 4px;
+}
+.subtotal{font-weight: bold; font-size: 16px;float:right;}
+.summary{
+    line-height: 1.6em;
+}
+.summary > span:first-child{color: #0e2058;font-weight: bold; font-size: 20px;display:block;}
+.summary > div{border-top: 1px solid #f2f2f2;margin-top: 15px;padding-top: 10px;}
+.summary p{text-align: center;}
+.summary a{
+    background-color: red; color: #fff;padding: 10px 30px;border-radius: 10px;border: 2px solid red;font-weight: bold;
+}
+.summary p{
+    margin-top: 30px;
 }
