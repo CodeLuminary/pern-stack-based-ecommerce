@@ -1,6 +1,6 @@
 import Product from "./Product";
 import { useDispatch,useSelector } from "react-redux";
-import { useEffect,useState} from "react";
+import { useEffect,useState, useLayoutEffect} from "react";
 import api from '../Api'
 import { setProducts } from "../redux/reducers/productsReducer";
 import {useParams} from "react-router-dom";
@@ -16,6 +16,7 @@ const ProductDetails = () =>{
     const [loadingState, setLoadingState] = useState("loading");
     const {id} = useParams();
     const [modalToggle, setModalToggle] = useState(false);
+    const [shouldShow, setShouldShow] = useState(true);
     
     const fetchProducts = async () =>{
         api.getApi('https://fakestoreapi.com/products')
@@ -47,14 +48,16 @@ const ProductDetails = () =>{
         return products[0];
     } 
 
-    useEffect(()=>{
+    useLayoutEffect(()=>{
         if(products.length === 0){
             fetchProducts();
         }
         else{
-            setLoadingState("ready")
+            if(shouldShow) setLoadingState("ready")        
         }
-        //alert(id)
+        return ()=>{
+            setShouldShow(false);
+        }
     },[]);
 
     const searchForProductInCart = (id) =>{
@@ -66,10 +69,37 @@ const ProductDetails = () =>{
         return -1;
     }
 
-    const addToCart = () =>{
+    /*const addToCart = () =>{
         const cartResult = searchForProductInCart(Number(id));
         if(cartResult === -1){
             dispatch(addItem(searchProductById(id)))
+            setModalToggle(true)
+        }    
+    }*/
+
+    const addToCart = () =>{
+        const cartResult = searchForProductInCart(Number(id));
+        if(cartResult === -1){
+            let product = searchProductById(id)
+            product = {
+                ...product,
+                quantity:1
+            }
+            console.log(product)
+            //localStorage.removeItem('cart')
+            dispatch(addItem(product));
+            let uCart = localStorage.getItem('cart');
+            if(uCart == null){
+                uCart = []; uCart.push(product);
+                localStorage.setItem('cart',JSON.stringify(uCart));
+            }
+            else{
+                uCart = JSON.parse(uCart);
+                //alert(uCart.length);
+                uCart.push(product);
+                //alert(uCart.length);
+                localStorage.setItem('cart',JSON.stringify(uCart));
+            }
             setModalToggle(true)
         }    
     }
