@@ -12,7 +12,7 @@
     width: 100%;
     background-color: var(--light-mode-color);
     border: 1px solid var(--gray);
-    height: 400px; position: relative;
+    height: 430px; position: relative;
 }
 .product .buttonParagraph{text-align: center; position: absolute; bottom: 10px; width: 100%}
 .product:hover{

@@ -28,6 +28,7 @@ const Home = () =>{
     }
 
     useEffect(()=>{
+        setShouldShow(true);
         if(products.length === 0){
             fetchProducts();
         }
@@ -50,7 +51,7 @@ const Home = () =>{
                     (<h2>Error loading products</h2>) :
                     (products.map((product)=>(
                                 <Link to={`/product/${product.id}`} key={product.id}>
-                                    <div className={`${homecss.product_parent} col-lg-3 col-md-3 col-sm-4 col-xs-12`}>
+                                    <div className={`${homecss.product_parent} col-lg-3 col-md-3 col-sm-4 col-xs-6`}>
                                         <Product productProperties={product} css={homecss} buttonObject={{click:()=>{window.location.href="/product/" + product.id},text:"View Details"}}/>                                       
                                     </div>
                                 </Link>

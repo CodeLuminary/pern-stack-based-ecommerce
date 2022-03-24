@@ -140,8 +140,8 @@
 .summary > span:first-child{color: #0e2058;font-weight: bold; font-size: 20px;display:block;}
 .summary > div{border-top: 1px solid #f2f2f2;margin-top: 15px;padding-top: 10px;}
 .summary p{text-align: center;}
-.summary a{
-    background-color: red; color: #fff;padding: 10px 30px;border-radius: 10px;border: 2px solid red;font-weight: bold;
+.summary a{ text-decoration: none;
+    background-color: var(--primary-color); color: #fff;padding: 10px 30px;border-radius: 10px;border: 2px solid var(--primary-color);font-weight: bold;
 }
 .summary p{
     margin-top: 30px;
