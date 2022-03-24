@@ -116,6 +116,7 @@
     .uCart{
         display: flex !important;
         flex-direction: column-reverse;
+        margin-bottom: 100px;
     }
     .uCart > div{width: 100% !important; float: left;}
     .cItem > div{width: 100%; float: left;}
