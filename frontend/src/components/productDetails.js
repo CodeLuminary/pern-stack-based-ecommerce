@@ -50,7 +50,7 @@ const ProductDetails = () =>{
 
     useLayoutEffect(()=>{
         setShouldShow(true);
-        if(products.length === 0){
+        if(products.length == 0){
             fetchProducts();
         }
         else{

@@ -1,14 +1,27 @@
 import "../css/navbar.css";
 import {Link} from "react-router-dom";
-import {useSelector} from 'react-redux';
-
+import {useSelector, useDispatch} from 'react-redux';
+import { useLayoutEffect } from "react";
 import {AiOutlineSearch,AiOutlineHome} from "react-icons/ai";
 import {BsCart3,BsListUl} from "react-icons/bs";
 import {FaHome,FaUserCog} from "react-icons/fa";
 import headercss from "../css/header.module.css";
+import { setCart } from "../redux/reducers/cartReducer";
 
 const Navbar = ({click}) =>{
-    const cart = useSelector((state)=> state.cart)
+    const cart = useSelector((state)=> state.cart);
+    const dispatch = useDispatch();
+
+    useLayoutEffect(()=>{
+      if(cart.value.length === 0){
+          let cart = localStorage.getItem('cart');
+          if(cart){
+              dispatch(setCart(JSON.parse(cart)))
+          }
+          
+      }
+      //alert(id)
+  },[]);
 
     return (
       <>
