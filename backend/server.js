@@ -5,9 +5,12 @@ const app = express();
 
 app.use(express.json());
 app.use(express.static(__dirname));
-app.use(cors());
-const errorLogger = require('./data/errorLogger')
-errorLogger.constructDetailedError('errLogger.test.js','test','Testing error logging\nVery Good');
+//app.use(cors());
+
+app.use(cors(
+    {origin: '*'}
+ ));
+
 
 if(process.env.NODE_ENV === 'production'){
     app.listen();
