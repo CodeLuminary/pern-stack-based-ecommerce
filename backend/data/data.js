@@ -33,6 +33,10 @@ class data{
         var newDate = new Date(timezone*60 * 60000 + date.valueOf() + (date.getTimezoneOffset()*60000))
         return newDate;
     }
+
+    static getFrontendUrl = ()=>{
+        return process.env.FRONT_END_URL
+    }
 }
 
 module.exports = data;
