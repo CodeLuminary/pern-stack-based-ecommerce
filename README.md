@@ -35,6 +35,7 @@ DB_PASSWORD = ?
 #Set timezone, put 1 if it's GMT+1 or -1 if it's GMT-1
 TIME_ZONE = ?
 SKIP_PREFLIGHT_CHECK=true 
+FRONT_END_URL=http://localhost:3000 #or any other url
 ```
 
 ## STARTING PROJECT
