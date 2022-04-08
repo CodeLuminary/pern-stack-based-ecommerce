@@ -57,6 +57,7 @@ const Navbar = ({click}) =>{
         <li>
           <Link to="/">Shop</Link>
         </li>
+        <li className="login">Login</li> 
       </ul>
 
       
