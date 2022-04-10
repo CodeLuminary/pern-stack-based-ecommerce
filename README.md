@@ -49,6 +49,16 @@ cd to the frontend folder in your terminal and enter the following command
 npm start
 ```
 
+To set homepage to show products from local backend:
+
+change the value of REACT_APP_PRODUCT_URL & REACT_APP_DOMAIN_URL in the .env file to your local backend url inside the frontend folder
+
+```
+REACT_APP_PRODUCT_URL=https://fakestoreapi.com/products
+
+REACT_APP_DOMAIN_URL=http://localhost:5000
+```
+
 You can access the project in your browser by entering - `localhost:3000`
 
 
