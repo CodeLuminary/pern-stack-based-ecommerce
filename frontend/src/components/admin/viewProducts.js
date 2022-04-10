@@ -10,7 +10,7 @@ const ViewProducts = ({setShowLoading}) =>{
     const [loadingState, setLoadingState] = useState("loading")
 
     const fetchProducts = async ()=>{
-        api.getApi(`${process.env.REACT_APP_DOMAIN_URL}/products`)
+        api.getApi(`${process.env.REACT_APP_BACKEND_URL}/products`)
         .then(response=>response.json())
         .then(result=>{    console.log(result,"result") 
             dispatch(setProducts(result.data))
