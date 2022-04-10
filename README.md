@@ -67,8 +67,8 @@ REACT_APP_BACKEND_URL=http://localhost:5000
 cd to the backend folder in your terminal and enter the following command
 
 ```
-#This is to run all test and make sure database connection is working and tables are created
-#See test folder inside the backend folder for more info.
+# This is to run all test and make sure database connection is working and tables are created
+# See test folder inside the backend folder for more info.
 npm run test
 ```
 
