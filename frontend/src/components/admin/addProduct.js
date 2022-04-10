@@ -60,7 +60,7 @@ const AddProduct = ({setShowLoading}) =>{
                         description: productDescription,
                         rate: "0"
                     }*/
-                    api.PostFormData('/add-product', formData)
+                    api.PostFormData(`${process.env.REACT_APP_DOMAIN_URL}/add-product`, formData)
                     .then(result=>{     
                         //setShowLoading(false)  
                         dispatch(setProducts(result.data)); 
