@@ -16,7 +16,7 @@ const router = () =>{
                 <Routes>
                     <Route index element={<Dashboard />} />
                     <Route path="add-product" element={<AddProduct />}/>
-                    <Route path="products/view" element={<ViewProducts />} />
+                    <Route path="view-products" element={<ViewProducts />} />
                 </Routes>
                 </div>
             </div>   
