@@ -61,8 +61,8 @@ const ViewProducts = ({setShowLoading}) =>{
                                 <td>
                                     <span onClick={()=>{
                                         if(window.confirm('Are you sure you want to delete this product?')){
-                                            setShowLoading(true)
-                                            api.getApi(`/delete-product/` + product.id)
+                                            //setShowLoading(true)
+                                            api.getApi(`${process.env.REACT_APP_BACKEND_URL}/delete-product/${product.id}`)
                                             .then(response=>response.json())
                                             .then(result=>{      
                                                 //setShowLoading(false);

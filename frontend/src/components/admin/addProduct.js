@@ -40,7 +40,8 @@ const AddProduct = ({setShowLoading}) =>{
                     <input ref={otherImages} type="file" multiple />  
                     <p className={addPcss.btnP}>
                 <button className={addPcss.btn} onClick={()=>{
-                    setShowLoading(true);
+                    //setShowLoading(true);
+                    alert("Please wait....")
                     let formData = new FormData();
                     formData.append("title", productName.current.value);
                     formData.append("price", productAmount.current.value);

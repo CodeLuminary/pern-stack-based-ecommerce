@@ -32,7 +32,7 @@ const Navbar = ({click}) =>{
                         <span>{cart.total}</span>
                         <br /><a className={`${headercss.mTxt}`}>Cart</a>
                 </Link>
-                <Link to="/"><FaUserCog className={headercss.icon} /><br /><span className={`${headercss.mTxt}`}>Account</span></Link>
+                <Link to="admin"><FaUserCog className={headercss.icon} /><br /><span className={`${headercss.mTxt}`}>Account</span></Link>
             </div>
             
         <nav className="navbar">

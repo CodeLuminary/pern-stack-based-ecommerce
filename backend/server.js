@@ -27,6 +27,7 @@ app.post('/register/submit', (req,res)=>{
 })
 
 app.post('/add-product', (req,res)=>{
+    console.log("I don tire")
     productController.addProduct(req,res);
 })
 
