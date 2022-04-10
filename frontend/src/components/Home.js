@@ -28,7 +28,6 @@ const Home = () =>{
     }
 
     useEffect(()=>{
-        alert(process.env.REACT_APP_PRODUCT_URL)
         setShouldShow(true);
         if(products.length === 0){
             fetchProducts();
