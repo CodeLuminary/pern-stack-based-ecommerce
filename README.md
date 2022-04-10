@@ -51,7 +51,7 @@ npm start
 
 To set homepage to show products from local backend:
 
-change the value of REACT_APP_PRODUCT_URL & REACT_APP_DOMAIN_URL in the .env file to your local backend url inside the frontend folder
+change the value of REACT_APP_PRODUCT_URL & REACT_APP_DOMAIN_URL in the .env file inside the frontend folder to your local backend url
 
 ```
 REACT_APP_PRODUCT_URL=https://fakestoreapi.com/products
