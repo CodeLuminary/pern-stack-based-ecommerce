@@ -6,8 +6,9 @@
     padding: 1rem;
     z-index: 50;
     margin: 0px !important;
+    position: relative;
   }
-  
+  .navbar > div{float: left;width: 33.33%}
   .navbar__logo h2 {
     color: #f4f4f4;
     font-size: 2rem;
@@ -97,7 +98,17 @@
     }
   }
 .login{
-  background-color: #f68b1c
+  background-color: #f68b1c;
+  position: absolute; right: 5%;
+  padding: 8px 30px;color: #fff;
+  border-radius: 5px;
+  border: 2px solid #f68b1c;
+  cursor: pointer;
+}
+.login:hover{
+  text-decoration: none;
+  background: transparent;
+  color: #f68b1c
 }
   
 

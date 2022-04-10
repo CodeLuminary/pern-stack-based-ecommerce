@@ -2,7 +2,7 @@ import {BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Dashboard from './dashboard'
 import AddProduct from './addProducts';
 import ViewProducts from './viewProducts';
-import Sidebar from './sidebar';
+import Sidebar from './adminSideBar2';
 import admincss from '../../css/admin.module.css'
 const router = () =>{
     return (
@@ -10,7 +10,7 @@ const router = () =>{
             <Sidebar />
             <div className={admincss.content}>
                 <div className={admincss.nav_top}>
-                    <div><div><span className="uName"><i className="fa fa-user"></i>&nbsp;John Doe</span><span className={admincss.logout} Onclick={()=>{}} className="logou"><i class="fa fa-sign-out"></i>&nbsp;Log Out</span></div></div>      
+                    <div><div><span className="uName"><i className="fa fa-user"></i>&nbsp;John Doe</span></div></div>      
                 </div>
                 <div className={admincss.app}>
                 <Routes>
