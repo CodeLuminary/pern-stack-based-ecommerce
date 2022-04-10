@@ -12,6 +12,9 @@ class initializeDb{
         sql = `CREATE TABLE products (id SERIAL PRIMARY KEY, title VARCHAR, description TEXT, image VARCHAR, price VARCHAR, previous_price VARCHAR, quantity INT, buying_price VARCHAR, category VARCHAR, regtime timestamp);`;
         await dbConnect.queryDb(sql);
 
+        sql = `CREATE TABLE products_images(id SERIAL PRIMARY KEY, image VARCHAR, product_id int, create_at datetime, FOREIGN KEY(product_id) REFERENCES products(id))`;
+        await dbConnect.queryDb(sql);
+
         dbConnect.closeConnection()
         return "Table created successfully";
     }
