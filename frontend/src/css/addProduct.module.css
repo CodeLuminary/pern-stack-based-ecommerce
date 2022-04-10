@@ -1,6 +1,6 @@
 
 .required{
-    color: var(--main-color)
+    color: red
 }
 .input{
     margin: 3px 0px 10px;

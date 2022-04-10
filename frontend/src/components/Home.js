@@ -14,7 +14,7 @@ const Home = () =>{
     const [shouldShow, setShouldShow] = useState(true);
     
     const fetchProducts = async () =>{
-        api.getApi('https://fakestoreapi.com/products')
+        api.getApi(process.env.REACT_APP_PRODUCT_URL)
         .then(response=>response.json())
         .then(result=>{          
             if(shouldShow){
@@ -28,6 +28,7 @@ const Home = () =>{
     }
 
     useEffect(()=>{
+        alert(process.env.REACT_APP_PRODUCT_URL)
         setShouldShow(true);
         if(products.length === 0){
             fetchProducts();
