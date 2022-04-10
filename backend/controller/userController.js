@@ -27,7 +27,7 @@ class userController{
     }
 
     static registerUser = async (userObject,db=userController.getUserDb())=>{
-        return new Promise((resolve,reject)=>{
+        return new Promise(async (resolve,reject)=>{
             try{                   
                 let sql = `SELECT * FROM users WHERE email='${userObject.email}';`
                 const user = await db.queryDb(sql);
@@ -69,7 +69,7 @@ class userController{
     }
 
     static loginUser = async (userObject,db=userController.getUserDb())=>{
-        return new Promise((resolve,reject)=>{
+        return new Promise(async (resolve,reject)=>{
             try{  
                 let sql = `SELECT * FROM users WHERE email='${userObject.email}';`;
                 const user = await db.queryDb(sql);

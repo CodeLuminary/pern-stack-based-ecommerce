@@ -62,7 +62,7 @@ const ViewProducts = ({setShowLoading}) =>{
                                     <span onClick={()=>{
                                         if(window.confirm('Are you sure you want to delete this product?')){
                                             setShowLoading(true)
-                                            api.getApi('/account/delete-product/' + product.id)
+                                            api.getApi(`/delete-product/` + product.id)
                                             .then(response=>response.json())
                                             .then(result=>{      
                                                 //setShowLoading(false);

@@ -60,21 +60,13 @@ class dbConnect{
         return await this.queryDb(`SELECT * FROM ${table}`);
     }
 
-    insertData = (table, data)=>{
-        let sql = "INSERT INTO " + table + " (";
-        let sqlvalues = "";
-        let sqlvaluesArray = [];
-        let cnt = 1;
-        for(tableColumn in data){
-            sql += tableColumn.toString() + ", ";           
-            //sqlvalues += typeof data[tableColumn] === 'string' ? "'" + data[tableColumn] + "', " : data[tableColumn];
-            sqlvalues += "$" + cnt.toString() + ", ";
-            sqlvaluesArray.push(data[tableColumn]);
+    getAllData = async (table)=>{
+        return await this.queryDb(`SELECT * FROM ${table}`);
+    }
 
-            cnt++;
-        }
-        sql = sql.slice(0, -2) + ") VALUES (" + sqlvalues.slice(0,-2) + ") RETURNING *";
-        return this.queryDb(sql, sqlvaluesArray);
+    insertData = async (table, data)=>{
+        let sql = "INSERT INTO " + table + " SET ?";
+        return this.queryDb(sql, data);
     }
 
     closeConnection = async ()=>{

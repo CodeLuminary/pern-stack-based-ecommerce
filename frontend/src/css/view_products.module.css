@@ -48,7 +48,7 @@
     text-align: center;
 }
 .product_div td, .product_div th{
-    padding: 5px;
+    padding: 5px; text-align:center;
 }
 .product_div tr:nth-child(odd){
     background-color: #f2f2f2;
